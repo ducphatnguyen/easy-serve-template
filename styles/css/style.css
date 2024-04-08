@@ -1,17 +1,73 @@
-@import url();
-body {
+@charset "UTF-8";
+:root {
+  --primary-color: #EE4D2D;
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+  --border-color: #dbdbdb ;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  box-sizing: border-box;
   color: white;
   margin: 0;
 }
 
+body {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+}
+
+.grid {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.grid__full-width {
+  width: 100%;
+}
+
+.grid__row {
+  display: flex;
+  /* Nhảy xuống hàng khi vượt quá row */
+  flex-wrap: wrap;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes growth {
+  from {
+    transform: scale(var(--growth-from));
+  }
+  to {
+    transform: scale(var(--growth-to));
+  }
+}
 .button {
   width: 125px;
   height: 44px;
   padding: 10px, 20px, 10px, 20px;
   border-radius: 32px;
   border: none;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .button--success {
@@ -59,6 +115,7 @@ body {
 }
 .header__navbar-item {
   margin: 0 10px;
+  font-size: 16px;
 }
 .header__navbar-links {
   display: flex;
@@ -66,14 +123,44 @@ body {
   list-style: none;
   gap: 0 px;
 }
-.header__image {
-  position: absolute;
+.header__content {
+  position: relative;
+  z-index: 20;
+  width: 782px;
+  height: 152px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  left: 50%;
+  top: 150px;
+  transform: translateX(-50%);
+}
+.header__content-title {
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 46px;
+  text-align: center;
+}
+.header__content-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+.header__image {
+  position: absolute;
   width: 100%;
   z-index: 10;
   bottom: 0;
+}
+.header__image {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
