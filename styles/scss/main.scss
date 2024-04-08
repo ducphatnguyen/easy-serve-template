@@ -38,6 +38,7 @@
             list-style: none;
             gap: 0 48px;
             cursor: pointer;
+            color: var(--white-color);
         }
 
         &-item {
@@ -67,13 +68,14 @@
         left: 50%;
         top: 150px;
         transform: translateX(-50%);
-        
+
 
         &-title {
             font-size: 38px;
             font-weight: 500;
             line-height: 46px;
             text-align: center;
+            color: var(--white-color);
         }
 
         &-subtitle {
@@ -81,6 +83,7 @@
             font-weight: 400;
             line-height: 24px;
             text-align: center;
+            color: var(--white-color);
         }
     }
 
@@ -101,6 +104,83 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+}
+
+// service
+.service {
+    height: 772px;
+    &__emphasis {
+        margin: 0 auto;
+        margin-top: 100px;
+        width: 573px;
+        height: 92px;
+        text-align: center;
+
+        &-description {
+            color: var(--black-color);
+            font-size: 38px;
+            font-weight: 500;
+            line-height: 46px;
+
+            &--success {
+                color: linear-gradient(124.32deg, #31CB9E 0.01%, #0FAAA2 100.02%);
+            }
+        }
+    }
+
+    &__card-list {
+        margin: 0 auto;
+        width: 1120px;
+        height: 400px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        margin-top: 36px;
+    }
+
+    &__card {
+        background-color: #F1F3F5;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    &__card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.card-body {
+    &__icon {
+        width: 80px;
+        height: 80px;
+    }
+    &__container {
+        width: 277px;
+        color: var(--black-color);
+        &--short {
+            margin-top: 24px;
+            height: 192px;
+        }
+        &--tall {
+            height: 240px;
+        }
+        &-title {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 32px;
+            text-align: left;
+        }
+        &-content {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+        }
     }
 
 }

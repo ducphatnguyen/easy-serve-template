@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #EE4D2D;
-    --white-color: #fff;
-    --black-color: #000;
+    --primary-color: linear-gradient(124.32deg, #31CB9E 0.01%, #0FAAA2 100.02%);
+    --white-color: #FFFFFF;
+    --black-color: #030D24;
     --text-color: #333;
-    --border-color: #dbdbdb
+    --border-color: #dbdbdb;
 }
 
 * {
@@ -14,7 +14,7 @@ html {
     font-size: 62.5%;
     line-height: 1.6rem;
     box-sizing: border-box;
-    color: white;
+    color: var(--black-color);
     margin: 0;
 }
 
@@ -51,7 +51,6 @@ body {
         opacity: 1;
     }
 }
-
 @keyframes growth {
     from {
         transform: scale(var(--growth-from));
@@ -74,12 +73,15 @@ body {
     font-size: 16px;
     
 }
-
 .button--success {
     background: linear-gradient(124.32deg, #31CB9E 0.01%, #0FAAA2 100.02%);
 }
-
 .button--transparent {
     background: transparent;
     color: white;
+}
+
+// Text
+.text-primary {
+    @include text-primary;
 }
