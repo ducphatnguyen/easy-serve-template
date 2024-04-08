@@ -1,0 +1,82 @@
+:root {
+    --primary-color: #EE4D2D;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    color: white;
+    margin: 0;
+}
+
+body {
+    color: #030d24;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    /* Nhảy xuống hàng khi vượt quá row */
+    flex-wrap: wrap;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+
+.button {
+    width: 125px;
+    height: 44px;
+    padding: 10px, 20px, 10px, 20px;
+    border-radius: 32px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.button--success {
+    background: linear-gradient(124.32deg, #31CB9E 0.01%, #0FAAA2 100.02%);
+}
+
+.button--transparent {
+    background: transparent;
+    color: white;
+}
