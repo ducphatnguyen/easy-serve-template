@@ -328,7 +328,7 @@ body {
 
 .solution {
   position: relative;
-  height: 1078px;
+  height: 807px;
   background: url("https://s3-alpha-sig.figma.com/img/d098/1df7/bb97306865902cc0fed48cb04a859997?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PtwYJDfUXxEqmA5tXwwe94hG~aNBFc4oL6iBr1Eqfaiml57emU8oN9nk43jw2ymNk4vV7ogQh7b7sAvJvfpzljffw4LXS6W95j8Y~4bqMHAY9DBSk8b9H9UdSbyDNem1uiKjXCn59gU6TabMxPow1FUSNXkhnjGqCKxSmZ6vlfw1DHFA-LuxxxXMaA2jMVoX4Mm9eDFFZLCUkyAS6yVvUnlKYH6Lp-PjWBk3lDATUMv5Kjg3cqzULm-hGwJGwRKIbKbOqK~cD~HEh2gRDQJA32KkPBrUxQXiLnovnwQo9GH9zNW2SEbu53Jy9mm359fBdWxKtYMd8LLiRD81zbIl2Q__");
   background-size: cover;
   display: flex;
@@ -346,8 +346,16 @@ body {
 .solution__container {
   width: 1010px;
   height: 626px;
-  margin: auto 0;
+  margin: 90px 0;
   z-index: 1;
+  position: relative;
+}
+.solution__container--absolute-image {
+  position: absolute;
+  top: 321px;
+  left: 397px;
+  width: 100%;
+  height: 100%;
 }
 .solution__info {
   width: 500px;
@@ -371,9 +379,10 @@ body {
   text-align: center;
 }
 .solution__img {
-  margin-top: 120px;
+  margin-top: 90px;
   width: 420px;
   height: 340px;
+  position: relative;
 }
 .solution__img-description {
   font-size: 20px;
