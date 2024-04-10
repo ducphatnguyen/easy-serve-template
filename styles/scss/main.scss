@@ -741,41 +741,61 @@
 .footer {
     background-color: rgba(5, 18, 42, 1);
     height: 353px;
-    
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+   
     &__container {
-        margin: 80px 322px 0 160px;
+        display: flex;
+        justify-content: space-between;
     }
-
+    
     &__content {
-
         width: 420px;
         height: 128px;
-        &-logo {
-
-        }
-
-        &-description {
-            color: rgba(136, 142, 156, 1)
-        }
-
-        &-navbar {
-            width: 330px;
+        // &-logo {
             
+        // }
+        &-description {
+            color: rgba(136, 142, 156, 1);
+            margin: 20px 0;
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 400;
+        }
+        &-navbar {
+            width: 330px;   
         }
     }
 
     &__contact {
+        color: var(--white-color);
+        width: 300px;
+        text-align: end;
+        &-info{
 
-    }
-
-    &__social-networks {
-
+            &-title {
+                font-size: 20px;
+                line-height: 22px;
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+            &-description {
+                font-size: 14px;
+                line-height: 17px;
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+        &-social-networks {
+            margin-top: 20px;
+            gap: 0 10px;
+        }
     }
 
     &__policy {
-        border-top: 1px;
-        border-color: rgba(136, 142, 156, 1);
-        border-style: solid;
+        margin-top: 60px;
+        border-top: 1px solid rgba(39, 47, 62, 1); 
 
         display: flex;
         align-items: end;
@@ -783,7 +803,7 @@
 
         height: 46px;
         &-copyright {
-            color: rgba(255, 255, 255, 1);
+            color: rgba(136, 142, 156, 1);
             font-size: 14px;
             font-weight: 400;
             line-height: 22px;
@@ -791,16 +811,16 @@
         &-security {
             display: flex;
             justify-content: space-between;
-            color: rgba(255, 255, 255, 1);
+            color: rgba(136, 142, 156, 1);
             font-size: 14px;
             font-weight: 400;
             line-height: 22px;
+            width: 367px;
         }
     }
 }
 
 .content-navbar {
-
     &__list {
         display: flex;
         align-items: center;
@@ -811,9 +831,14 @@
 
             &-link {
                 text-decoration: none;
-                color: var(--white-color);
+                color: rgba(255, 255, 255, 1);
+                font-size: 14px;
+                line-height: 22px;
             }
         }
-
     }
+}
+
+.social-networks__img {
+    margin-left: 12px;
 }

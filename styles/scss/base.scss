@@ -90,3 +90,7 @@ body {
 .text-primary {
     @include text-primary;
 }
+
+.fs-5 {
+    font-size: 20px;
+}
