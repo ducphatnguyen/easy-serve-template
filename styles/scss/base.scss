@@ -77,6 +77,10 @@ body {
 .button--success {
     background: linear-gradient(124.32deg, #31CB9E 0.01%, #0FAAA2 100.02%);
 }
+.button--sm {
+    width: 80px;
+}
+
 .button--transparent {
     background: transparent;
     color: var(--white-color);
