@@ -4,6 +4,8 @@
     --black-color: #030D24;
     --text-color: #333;
     --border-color: #dbdbdb;
+    --card-color: #F1F3F5;
+    --subtext-color: #888E9C;
 }
 
 * {
@@ -89,6 +91,10 @@ body {
 // Text
 .text-primary {
     @include text-primary;
+}
+.text-underlined {
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .fs-5 {
