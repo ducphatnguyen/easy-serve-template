@@ -4,7 +4,7 @@
         position: relative;
         height: 1000px;
 
-        background: url('/assets/img/header/background.png');
+        background: url('../../assets/img/header/header-background.png');
         background-size: cover;
 
         padding: 40px 0;
@@ -93,6 +93,102 @@
         align-items: center;
     }
 }
+
+@media screen and (max-width: 393px) {
+    .header {
+        &__container {
+            position: relative;
+            height: 1000px;
+    
+            background: url('../../assets/img/header/header-background.png');
+            background-size: cover;
+    
+            padding: 20px;
+        }
+    
+        // Navbar
+        &__navbar {
+            // width: 1124px;
+            max-width: 1124px;
+            margin: auto;
+    
+            display: flex;
+            align-items: center;
+    
+            &-list {
+                display: none;
+            }
+    
+            &-item {
+                font-size: 1.6rem;
+    
+                &-link {
+                    text-decoration: none;
+                    color: var(--white-color);
+                }
+            }
+    
+            &-links {
+                &-login {
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    line-height: 24px;
+                    color: var(--white-color);
+                    margin-right: 24px;
+                    cursor: pointer;
+                }
+            }
+        }
+    
+        // Content
+        &__content {
+            position: relative;
+    
+            width: 782px;
+            height: 156px;
+    
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+    
+            top: calc(199px - 80px);
+            left: 50%;
+            transform: translateX(-50%);
+    
+            text-align: center;
+            color: var(--white-color);
+    
+            &-title {
+                font-size: 3.8rem;
+                font-weight: 500;
+                line-height: 46px;
+    
+            }
+    
+            &-subtitle {
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 24px;
+            }
+        }
+    
+        // Image
+        &__image {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    
+}
+
+
+
+
+
 
 /* =====================================SERVICE================================= */
 .service {
@@ -229,7 +325,7 @@
 
     &__img {
         width: 825px;
-        background-image: url('/assets/img/payment/payment-girl.png');
+        background-image: url('../../assets/img/payment/payment-girl.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: left 104px;
@@ -282,7 +378,7 @@
 
     height: 807px;
 
-    background: url("/assets/img/solution/background.png");
+    background: url("../../assets/img/solution/solution-background.png");
     background-size: cover;
 
     &__container {
@@ -439,7 +535,7 @@
 
     &__container {
         margin-top: 40px;
-        background-image: url('/assets/img/testimonial/testimonial.png');
+        background-image: url('../../assets/img/testimonial/testimonial.png');
 
         width: 1120px;
         height: 409px;
@@ -535,7 +631,7 @@
             position: relative;
             height: 710px;
 
-            background: url('/assets/img/header/background.png');
+            background: url('../../assets/img/header/header-background.png');
             background-size: cover;
         }
 
@@ -544,7 +640,7 @@
             bottom: 0;
             left: 0;
 
-            background: url('/assets/img/contact/mechanic.png');
+            background: url('../../assets/img/contact/mechanic.png');
             background-repeat: no-repeat;
             background-size: contain;
             background-position: 982px bottom;
