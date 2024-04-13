@@ -1,5 +1,29 @@
+/* Embedded Utilized List SCSS*/
 @import "./mixins.scss";
 @import "./base.scss";
-@import "./main.scss";
 
+// Animation
+@import "./animation/animation.scss";
+
+// Common Elements (General Components)
+@import "./common/button.scss";
+@import "./common/text.scss";
+@import "./common/grid.scss";
+
+// Separated Layout 
+@import "./layouts/header.scss";
+@import "./layouts/footer.scss";
+
+// Variables
+@import "./variables/color.scss";
+
+// ========================== PAGES =========================
+// 1. HOME (Header + Footer)
+@import "./pages/home/service.scss";
+@import "./pages/home/booking.scss";
+@import "./pages/home/payment.scss";
+@import "./pages/home/solution.scss";
+@import "./pages/home/feature.scss";
+@import "./pages/home/testimonial.scss";
+@import "./pages/home/contact.scss";
 

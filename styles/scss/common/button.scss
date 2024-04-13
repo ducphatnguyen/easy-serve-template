@@ -1,0 +1,48 @@
+/* Button */
+.button {
+    padding: 12px 20px;
+    border-radius: 32px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button--success {
+    background: linear-gradient(124.32deg, #31CB9E 0.01%, #0FAAA2 100.02%);
+}
+
+.button--sm {
+    width: 80px;
+}
+
+.button--transparent {
+    background: transparent;
+    color: var(--white-color);
+}
+
+/* Additional Button Styles */
+.button--danger {
+    background-color: #FF6347;
+}
+
+.button--lg {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+}
+
+.button--outline {
+    border: 2px solid #333;
+    background-color: transparent;
+    color: #333;
+}
+
+.button--rounded {
+    border-radius: 20px;
+}
+
+.button--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

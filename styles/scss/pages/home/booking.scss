@@ -1,0 +1,97 @@
+/* =====================================BOOKING================================= */
+.booking {
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        // Question
+        width: 1120px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 72px 0;
+    }
+
+    &__info {
+
+        &-title {
+            font-size: 3.8rem;
+            font-weight: 500;
+            line-height: 4.6rem;
+        }
+
+        &-description {
+            width: 360px;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+
+            &>p {
+                margin: 0;
+                padding: 20px 0;
+            }
+        }
+    }
+    &__img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        transform: translateX(50%);
+        margin-left: 40px;
+    }
+}
+
+.button--show-desktop {
+    display: block;
+}
+.button--show-mobile {
+    display: none;
+}
+
+// Responsive for booking
+@media screen and (max-width: 768px) {
+    .booking {
+        display: block;
+        &__container {
+            // Question
+            width: 100%;
+            display: block;
+            position: unset;
+        }
+    
+        &__info {
+            width: 370px;
+            padding: 0 16px;
+            
+            &-title {
+                font-size: 3.8rem;
+                font-weight: 500;
+                line-height: 4.6rem;
+            }
+    
+            &-description {
+                width: 360px;
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 2.4rem;
+            }
+        }
+        
+        &__img {
+            position: unset;
+            transform: unset;
+            margin: 0;
+            width: 100%;    
+            padding: 50px 0;
+
+        }
+    }
+    
+    .button--show-desktop {
+        display: none;
+    }
+    .button--show-mobile {
+        display: block;
+    }
+
+}

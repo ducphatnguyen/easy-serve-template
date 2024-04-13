@@ -1,0 +1,37 @@
+/* Text Styles */
+.text-primary {
+    background-image: var(--color-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.text-underlined {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+// Font-size
+.fs-5 {
+    font-size: 20px;
+}

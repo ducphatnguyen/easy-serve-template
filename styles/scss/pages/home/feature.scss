@@ -1,0 +1,157 @@
+/* =====================================FEATURE================================= */
+.feature {
+    padding: 68px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 48px;
+    }
+
+    &__info {
+        width: 500px;
+        padding-top: 8px;
+
+        &-title,
+        &-content {
+            font-size: 3.8rem;
+            font-weight: 500;
+            line-height: 4.6rem;
+            text-align: center;
+        }
+
+        &-content {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+
+            padding-top: 8px;
+        }
+    }
+
+    &__card-list {
+        width: 930px;
+    
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+        gap: 20px;
+    }
+
+    &__card-item {
+        display: flex;
+        align-items: center;
+
+        padding: 14px 0;
+
+        background-color: #F1F3F5;
+        border-radius: 8px;
+
+        &-icon {
+            display: flex;
+            align-items: center;
+
+            margin: 0 16px;
+        }
+
+        &-content {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+        }
+    }
+
+    &__contact {
+        &-submit {
+            margin: 8px 0;
+        }
+        &-thrill {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+        }
+    }
+}
+
+// Responsive for feature
+@media screen and (max-width: 768px) {
+    .feature {
+        padding: 67px 0;
+        display: block;
+
+        &__container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    
+        &__info {
+            width: 100%;
+            padding: 0 16px;
+
+            &-title,
+            &-content {
+                font-size: 3.8rem;
+                font-weight: 500;
+                line-height: 4.6rem;
+                text-align: center;
+            }
+    
+            &-content {
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 2.4rem;
+            }
+        }
+    
+        &__card-list {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 0 16px;
+        }
+    
+        &__card-item {
+            width: 100%;
+    
+            &-icon {
+                margin-left: 16px;
+                margin-right: 16px;
+                display: flex;
+                align-items: center;
+            }
+    
+            &-content {
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 2.4rem;
+                padding: 0 8px;
+            }
+        }
+    
+        &__contact {
+            &-submit {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 8px 0;
+            }
+    
+            &-thrill {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 2.4rem;
+            }
+        }
+    }
+
+}

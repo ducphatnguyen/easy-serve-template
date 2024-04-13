@@ -1,0 +1,128 @@
+/* =====================================SERVICE================================= */
+.service {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        padding: 100px 160px 140px 160px;
+        row-gap: 40px;
+    }
+    &__emphasis {
+        // Question
+        width: 573px;
+        // max-width: 573px;
+
+        text-align: center;
+        &-description {
+            font-size: 3.8rem;
+            font-weight: 500;
+            line-height: 4.6rem;
+        }
+    }
+    &__card-list {
+        display: flex;
+        gap: 24px;
+    }
+    &__card {
+        background-color: var(--color-card);
+        padding: 40px;
+        border-radius: 8px;
+    }
+}
+.card-body {
+    &__icon {
+        &-img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+    &__container {
+
+        width: 277px;
+
+        &--short {
+            padding-top: 24px;
+        }
+
+        &-title {
+            font-size: 2.4rem;
+            font-weight: 500;
+            line-height: 3.2rem;
+        }
+
+        &-content {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+            color: #4D5562;
+            margin: 0;
+            padding-top: 16px;
+        }
+    }
+}
+
+// Responsive for service
+@media screen and (max-width: 768px) {
+    .service {
+        
+        &__container {
+            width: 100%;
+            padding: 0;
+            row-gap: 40px;
+        }
+        &__emphasis {
+
+            width: 100%;
+            padding: 0 32px 32px;
+    
+            text-align: center;
+            &-description {
+                font-size: 3.8rem;
+                font-weight: 500;
+                line-height: 4.6rem;
+            }
+        }
+        &__card-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        &__card {
+            background-color: var(--color-card);
+            padding: 40px;
+            border-radius: 8px;
+        }
+    }
+    .card-body {
+        &__icon {
+            &-img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        &__container {
+    
+            width: 277px;
+    
+            &--short {
+                padding-top: 24px;
+            }
+    
+            &-title {
+                font-size: 2.4rem;
+                font-weight: 500;
+                line-height: 3.2rem;
+            }
+    
+            &-content {
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 2.4rem;
+                color: #4D5562;
+                margin: 0;
+                padding-top: 16px;
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+/* Grid */
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    /* Nhảy xuống hàng khi vượt quá row */
+    flex-wrap: wrap;
+}
+
+/* Additional Grid Styles */
+.grid__col {
+    flex: 1;
+}
+
+.grid__col-2 {
+    flex-basis: calc((100% - 20px) / 2);
+    margin-right: 20px;
+}
+
+.grid__col-3 {
+    flex-basis: calc((100% - 40px) / 3);
+    margin-right: 20px;
+}
+
+.grid__col-4 {
+    flex-basis: calc((100% - 60px) / 4);
+    margin-right: 20px;
+}
+
+.grid__col-5 {
+    flex-basis: calc((100% - 80px) / 5);
+    margin-right: 20px;
+}
+
+.grid__col-6 {
+    flex-basis: calc((100% - 100px) / 6);
+    margin-right: 20px;
+}
+
+.grid__col-7 {
+    flex-basis: calc((100% - 120px) / 7);
+    margin-right: 20px;
+}
+
+.grid__col-8 {
+    flex-basis: calc((100% - 140px) / 8);
+    margin-right: 20px;
+}
+
+.grid__col-9 {
+    flex-basis: calc((100% - 160px) / 9);
+    margin-right: 20px;
+}
+
+.grid__col-10 {
+    flex-basis: calc((100% - 180px) / 10);
+    margin-right: 20px;
+}
+
+.grid__col-11 {
+    flex-basis: calc((100% - 200px) / 11);
+    margin-right: 20px;
+}
+
+.grid__col-12 {
+    flex-basis: calc((100% - 220px) / 12);
+    margin-right: 20px;
+}

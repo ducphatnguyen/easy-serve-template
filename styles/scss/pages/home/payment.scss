@@ -1,0 +1,76 @@
+/* =====================================PAYMENT================================= */
+.payment {
+
+    display: flex;
+
+    &__img {
+        width: 825px;
+        height: 612px;
+        background-image: url('../../assets/payment/payment-girl.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left 104px;
+    }
+
+    &__container {
+        padding-top: 168px;
+    }
+
+    &__info {
+        max-width: 456px;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        &-title {
+
+            font-size: 3.8rem;
+            font-weight: 500;
+            line-height: 4.6rem;
+        }
+
+        &-content {
+            max-width: 360px;
+            
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+        }
+
+        &-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+    }
+}
+
+// Responsive for payment
+@media screen and (max-width: 768px) {
+    .payment {
+        
+        flex-direction: column;
+        
+        &__container {
+            padding: 80px 16px 24px 16px;
+        }
+
+        &__img {
+            width: 100%;
+            height: 337px;
+
+            background-image: url('../../assets/payment/payment-girl.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: left 30px;
+            order: 2;
+        }
+
+        &__info {
+            transform: none;
+            order: 1;
+        }
+    }
+}

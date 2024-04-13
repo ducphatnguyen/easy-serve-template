@@ -1,0 +1,176 @@
+/* =====================================TESTIMONIAL================================= */
+.testimonial {
+    padding-bottom: 134px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    &__container {
+        background-image: url('../../assets/testimonial/testimonial.png');
+        background-repeat: no-repeat;
+
+        width: 1120px;
+        
+        padding: 56px 0;
+    }
+
+    &__card-list {
+        display: flex;
+        align-items: center;
+        gap: 67px;
+        margin-left: 60px;
+        // overflow-y: hidden;
+
+    }
+
+    &__card-item {
+        width: 537px;
+        padding: 40px;
+
+        &--center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-content {
+            color: var(--color-white);
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+            margin-top: 24px;
+
+            &--card-transparency {
+                text-align: center;
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 2.2rem;
+            }
+        }
+
+        &-title {
+            font-size: 2.4rem;
+            font-weight: 500;
+            line-height: 3.2rem;
+        }
+
+        &-description {
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 2.2rem;
+        }
+
+        &--md {
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 0.9px solid #FFFFFF4D;
+        }
+
+        &--sm {
+            width: 409px;
+            padding: 0;
+
+            &--center {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+// Responsive for testimonial
+@media screen and (max-width: 768px) {
+    .testimonial {
+
+        padding-bottom: 0;
+        
+        display: flex;
+        justify-content: center;
+        
+        &__container {
+            margin-top: 40px;
+            background-image: url('../../assets/testimonial/testimonial.png');
+            background-repeat: no-repeat;
+    
+            width: 1120px;
+            
+            padding: 56px 0;
+        }
+    
+        &__card-list {
+            display: flex;
+            align-items: center;
+            gap: 67px;
+            margin-left: 60px;
+            // overflow-y: hidden;
+
+            flex-direction: column;
+    
+        }
+    
+        &__card-item {
+            width: 537px;
+            padding: 40px;
+    
+            &--center {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+    
+            &-content {
+                color: var(--color-white);
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 2.4rem;
+    
+                &--card-blur {
+                    margin-top: 24px;
+                }
+    
+                &--card-transparency {
+                    text-align: center;
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    line-height: 2.2rem;
+                    margin-top: 24px;
+                }
+            }
+    
+            &-title {
+                font-size: 2.4rem;
+                font-weight: 500;
+                line-height: 3.2rem;
+            }
+    
+            &-description {
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 2.2rem;
+            }
+    
+            &--md {
+                backdrop-filter: blur(10px);
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border: 0.9px solid #FFFFFF4D;
+            }
+    
+            &--sm {
+                width: 409px;
+                padding: 0;
+    
+                &--center {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
