@@ -177,6 +177,10 @@
             &-body {
                 text-align: center;
             }
+
+            &-footer {
+                padding: 12px;
+            }
         }
 
         &__form {
@@ -188,7 +192,7 @@
 
             &-submit {
                 justify-content: space-between;
-
+                gap: 12px;
                 &-button {
                     margin-right: 0;
                 }

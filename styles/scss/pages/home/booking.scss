@@ -21,7 +21,7 @@
         }
 
         &-description {
-            width: 360px;
+            max-width: 360px;
             font-size: 1.6rem;
             font-weight: 400;
             line-height: 2.4rem;
@@ -60,6 +60,11 @@
         }
         &__info {
             padding: 0 16px;
+
+            &-title {
+                font-size: 3rem;
+                line-height: 3.8rem;
+            }
         }
         &__img {
             position: unset;

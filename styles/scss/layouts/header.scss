@@ -16,7 +16,16 @@
         display: flex;
         align-items: center;
 
+        &-logo {
+            // Move right
+            animation: moveRight 1s ease forwards;
+        }
+
         &-list {
+
+            // Movedown
+            animation: moveDown 1s ease forwards;
+
             list-style: none;
 
             display: flex;
@@ -39,6 +48,9 @@
             }
         }
         &-links {
+            // Move Left
+            animation: moveLeft 1s ease forwards;
+
             &-login {
                 font-size: 1.6rem;
                 font-weight: 500;
@@ -61,7 +73,10 @@
         }
 
         &-dropdown {
-            
+            background-color: rgba(5, 18, 48, 1);
+            width: 100%;
+            padding: 0 16px 16px;
+
             // Animation
             opacity: 0;
             visibility: hidden;
@@ -73,12 +88,6 @@
             left: 0;
             z-index: 9999;
 
-            background-color: rgba(5, 18, 48, 1);
-          
-            width: 100%;
-           
-            padding: 0 16px 16px;
-           
             &-list {
                 display: flex;
                 flex-direction: column;
@@ -131,7 +140,6 @@
             } 
 
         }
-
     }
 
     // Content
@@ -189,9 +197,16 @@
         }
 
         &__navbar {
-            position: relative;
+            &--mobile-bg {
+                background-color: rgba(5, 18, 48, 1);
+            }
 
+            // Default Mobile background
+            background-color: rgba(5, 18, 48, 0.9);
+            position: fixed;
+            width: 100%;
             padding: 16px 24px;
+            z-index: 9999;
 
             &-list--hide, &-links--hide {
                 display: none;
@@ -214,6 +229,7 @@
             }
 
             &-dropdown--show {
+
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -228,7 +244,7 @@
 
         // Content
         &__content {
-            padding: 46px 16px;
+            padding: 100px 16px;
             &-title {
                 font-size: 3rem;
                 line-height: 3.8rem;
