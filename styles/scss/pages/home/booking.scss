@@ -58,25 +58,9 @@
             display: block;
             position: unset;
         }
-    
         &__info {
-            width: 370px;
             padding: 0 16px;
-            
-            &-title {
-                font-size: 3.8rem;
-                font-weight: 500;
-                line-height: 4.6rem;
-            }
-    
-            &-description {
-                width: 360px;
-                font-size: 1.6rem;
-                font-weight: 400;
-                line-height: 2.4rem;
-            }
         }
-        
         &__img {
             position: unset;
             transform: unset;
@@ -86,7 +70,6 @@
 
         }
     }
-    
     .button--show-desktop {
         display: none;
     }

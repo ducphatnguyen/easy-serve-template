@@ -54,14 +54,13 @@
         flex-direction: column;
         
         &__container {
+            width: 100%;
             padding: 60px 16px 24px 16px;
         }
 
         &__img {
             width: 100%;
-            background-image: url('../../assets/payment/payment-girl.png');
             background-size: cover;
-            background-repeat: no-repeat;
             background-position: center 62px;
             order: 2;
         }

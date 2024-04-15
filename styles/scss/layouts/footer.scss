@@ -92,6 +92,7 @@
     .footer {
         padding: 0;
         &__container {
+            width: 100%;
             flex-direction: column;
             justify-content: unset;
             align-items: center;
@@ -130,7 +131,6 @@
                 gap: 16px;
             }
 
-            // ??
             &-copyright {
                 padding: 0 24px;
             }
@@ -142,7 +142,6 @@
     .content-navbar {
         &__list {
             flex-direction: column;
-            padding: 0;
         }
     }
     

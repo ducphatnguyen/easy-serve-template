@@ -123,6 +123,9 @@
 
 .footer-support {
     &__mobile {
+        display: flex;
+        align-items: center;
+        gap: 20px;
         color: var(--color-white);
         font-size: 2.4rem;
         font-weight: 500;
@@ -131,6 +134,9 @@
     }
 
     &__email {
+        display: flex;
+        align-items: center;
+        gap: 20px;
         color: var(--color-white);
         font-size: 2.4rem;
         font-weight: 500;
@@ -145,25 +151,21 @@
         position: unset;
 
         &__container {
-            height: 1012px;
-            background: url('../../assets/header/header-background.png');
-            background-size: cover;
             width: 100%;
+            min-height: 1012px;
             padding: 80px 16px;
         }
 
         &__background {
             &-overlay {
-                // position: unset;
+                position: unset;
                 display: none;
             }
         }
 
         &__info {
             position: unset;
-
             width: 100%;
-            padding: 0;
             margin-bottom: 24px;
 
             &-header {
@@ -175,25 +177,6 @@
             &-body {
                 text-align: center;
             }
-
-            &-footer {
-                backdrop-filter: blur(10px);
-                border-radius: 8px;
-                border: 0.9px solid rgba(255, 255, 255, 0.3);
-
-                padding: 40px;
-                background-color: rgba(255, 255, 255, 0.01);
-
-                &-title {
-                    font-size: 16px;
-                    font-weight: 500;
-                    line-height: 2.4rem;
-                }
-
-                &-support {
-                    margin-top: 24px;
-                }
-            }
         }
 
         &__form {
@@ -201,61 +184,17 @@
 
             &-control {
                 width: 100%;
-                margin-bottom: 16px;
-            }
-
-            &-label {
-                padding: 4px 0;
-                font-size: 1.4rem;
-                line-height: 2.2rem;
-                font-weight: 400;
-            }
-
-            &-input {
-                &-item {
-                    width: 100%;
-                    padding: 5px 12px 5px 12px;
-
-                    border: 1px solid rgba(213, 216, 221, 1);
-                    border-radius: 2px;
-
-                    &--text-area {
-                        padding: 14px 0;
-                    }
-                }
             }
 
             &-submit {
                 justify-content: space-between;
 
-                &-policy {
-                    color: var(--color-subtext);
-                    font-size: 1.2rem;
-                    font-weight: 400;
-                    line-height: 2rem;
+                &-button {
+                    margin-right: 0;
                 }
             }
 
         }
     }
-
-    .footer-support {
-        &__mobile {
-            color: var(--color-white);
-            font-size: 2.4rem;
-            font-weight: 500;
-            line-height: 3.2rem;
-            padding-bottom: 6px;
-        }
-
-        &__email {
-            color: var(--color-white);
-            font-size: 2.4rem;
-            font-weight: 500;
-            line-height: 3.2rem;
-            padding-bottom: 6px;
-        }
-    }
-
 
 }

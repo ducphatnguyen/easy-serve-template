@@ -80,34 +80,15 @@
 // Responsive for feature
 @media screen and (max-width: 768px) {
     .feature {
-        padding: 67px 0;
-        display: block;
-
+    
         &__container {
             width: 100%;
-            display: flex;
             justify-content: center;
-            align-items: center;
-            flex-direction: column;
         }
     
         &__info {
             width: 100%;
             padding: 0 16px;
-
-            &-title,
-            &-content {
-                font-size: 3.8rem;
-                font-weight: 500;
-                line-height: 4.6rem;
-                text-align: center;
-            }
-    
-            &-content {
-                font-size: 1.6rem;
-                font-weight: 400;
-                line-height: 2.4rem;
-            }
         }
     
         &__card-list {
@@ -118,29 +99,8 @@
         }
     
         &__card-item {
-            width: 100%;
-    
-            &-icon {
-                display: flex;
-                align-items: center;
-            }
-    
             &-content {
-                font-size: 1.6rem;
-                font-weight: 400;
-                line-height: 2.4rem;
                 padding: 0 8px;
-            }
-        }
-    
-        &__contact {
-            &-submit {
-                text-align: center;
-            }
-            &-thrill {
-                font-size: 1.6rem;
-                font-weight: 400;
-                line-height: 2.4rem;
             }
         }
         

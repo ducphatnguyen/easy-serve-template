@@ -66,62 +66,22 @@
 // Responsive for service
 @media screen and (max-width: 768px) {
     .service {
-        
         &__container {
             width: 100%;
             padding: 16px;
         }
         &__emphasis {
-
             width: 100%;
             padding-top: 60px;
     
-            text-align: center;
             &-description {
                 font-size: 3rem;
-                font-weight: 500;
                 line-height: 3.8rem;
                 padding: 0 40px;
             }
         }
         &__card-list {
-            display: flex;
             flex-direction: column;
-            gap: 24px;
-        }
-        &__card {
-            background-color: var(--color-card);
-            padding: 40px;
-            border-radius: 8px;
-        }
-    }
-    .card-body {
-        &__icon {
-            &-img {
-                width: 80px;
-                height: 80px;
-            }
-        }
-        &__container {
-    
-            &--short {
-                padding-top: 24px;
-            }
-    
-            &-title {
-                font-size: 2.4rem;
-                font-weight: 500;
-                line-height: 3.2rem;
-            }
-    
-            &-content {
-                font-size: 1.6rem;
-                font-weight: 400;
-                line-height: 2.4rem;
-                color: #4D5562;
-                margin: 0;
-                padding-top: 16px;
-            }
         }
     }
 }

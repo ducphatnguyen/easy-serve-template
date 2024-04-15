@@ -66,7 +66,6 @@
 // Responsive for solution
 @media screen and (max-width: 768px) {
     .solution {
-
         &__container {
             width: 100%;
         }
@@ -74,10 +73,6 @@
         &__info {
             width: 100%;
             padding: 0 16px;
-            margin: 0 auto;
-
-            text-align: center;
-            color: var(--color-white);
 
             &-title {
                 font-size: 3rem;
@@ -86,25 +81,9 @@
         }
 
         &__img {
-            position: relative;
-
-            margin-top: 0;
-            padding: 0 16px;
             &-item {
                 width: 100%;
                 object-fit: cover;
-            }
-
-            &-description {
-                font-size: 2rem;
-                font-weight: 400;
-                line-height: 2.8rem;
-                text-align: center;
-                color: var(--color-white);
-
-                &--mt-3 {
-                    margin-top: 52px;
-                }
             }
         }
     }
@@ -118,12 +97,12 @@
         &--absolute-image {
             transform: rotate(90deg);
 
-            top: 400px;
+            top: calc(50% - 46px);
             left: calc(50% - 32px);
 
             >img {
-                width: 80px;
-                height: 75px;
+                width: 76px;
+                height: 80px;
             }
         }
     }
