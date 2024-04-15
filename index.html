@@ -20,12 +20,15 @@
         <div class="header__container">
             <!-- 1. Navbar -->
             <nav class="header__navbar">
+
                 <div class="header__navbar-logo">
                     <a href="#" class="header__navbar-logo-link">
                         <img src="./assets/logo.png" alt="Logo">
                     </a>
                 </div>
-                <ul class="header__navbar-list">
+
+                <!-- List  -->
+                <ul class="header__navbar-list header__navbar-list--hide">
                     <li class="header__navbar-item">
                         <a href="#" class="header__navbar-item-link">Home</a>
                     </li>
@@ -39,8 +42,8 @@
                         <a href="#" class="header__navbar-item-link">About us</a>
                     </li>
                 </ul>
-
-                <div class="header__navbar-links">
+                <!-- Link -->
+                <div class="header__navbar-links header__navbar-links--hide">
                     <a class="header__navbar-links-login">
                         Login
                     </a>
@@ -49,8 +52,45 @@
                     </button>
                 </div>
 
+
+                <!-- ========================MOBILE========================= -->
+                <!-- Burger Toggle -->
                 <div class="header__navbar-burger">
-                    <img src="./assets/header/menu.png" alt="Menu Icon">
+                    <img src="./assets/header/burger-menu.png" alt="Menu Icon">
+                </div>
+
+                <!-- Cross Toggle -->
+                <div class="header__navbar-cross">
+                    <img src="./assets/header/cross-menu.png" alt="Menu Icon">
+                </div>
+
+                <!-- Dropdown Menu -->
+                <div class="header__navbar-dropdown">
+                    <div class="header__navbar-dropdown-wrap">
+                        <ul class="header__navbar-dropdown-list">
+                            <li><a href="#" class="header__navbar-dropdown-item">Home</a></li>
+                            <li><a href="#" class="header__navbar-dropdown-item">Features</a></li>
+                            <li><a href="#" class="header__navbar-dropdown-item">Demo</a></li>
+                            <li><a href="#" class="header__navbar-dropdown-item">About us</a></li>
+                        </ul>
+                        <div class="header__navbar-dropdown-info">
+                            <div class="text-primary header__navbar-dropdown-title">Let's keep in touch</div>
+                            <div class="header__navbar-dropdown-description">+61 412 774 034</div>
+                            <div class="header__navbar-dropdown-description">info@easyserv.au</div>
+                        </div>
+                        <div class="header__navbar-dropdown-social-networks">
+                            <img src="./assets/footer/facebook.png" alt="Facebook">
+                            <img src="./assets/footer/instagram.png" alt="Instagram">
+                            <img src="./assets/footer/linked-in.png" alt="LinkedIn">
+                        </div>
+
+                    </div>
+
+                    <div class="header__navbar-dropdown-links">
+                        <button class="button button--transparent">Login</button>
+                        <button class="button button--success">Contact us</button>
+                    </div>
+
                 </div>
 
             </nav>
@@ -70,7 +110,8 @@
 
             <!-- 3. Img -->
             <div class="header__image">
-                <img class="header__image-item" src="./assets/header/hero-image.png" alt="Hero Image">
+                <img class="header__image-item--desktop" src="./assets/header/hero-image.png" alt="Hero Image">
+                <img class="header__image-item--mobile" src="./assets/header/hero-mobile.png" alt="Hero Image">
             </div>
 
         </div>
@@ -332,17 +373,18 @@
 
                 <div class="feature__contact-submit">
                     <button class="button button--success">Contact us</button>
+                    <p class="feature__contact-thrill">for a demonstration today!</p>
                 </div>
 
-                <div class="feature__contact-thrill">
-                    for a demonstration today!
-                </div>
+                <!-- <div >
+                    
+                </div> -->
 
             </div>
         </section>
 
         <!-- Testimonial -->
-        <!-- <section class="testimonial">
+        <section class="testimonial">
             <div class="testimonial__container">
 
                 <div class="testimonial__card-list">
@@ -371,11 +413,11 @@
                 </div>
 
             </div>
-        </section> -->
+        </section>
 
         <!-- Contact -->
         <section class="contact">
-            <div class="contact__container contact__background-first">
+            <div class="contact__container">
                 <div class="contact__info">
                     <div class="contact__info-header text-primary">
                         Let's keep in touch
@@ -473,7 +515,9 @@
 
                 </form>
             </div>
-            <div class="contact__background-second"></div>
+
+            <div class="contact__background-overlay"></div>
+
         </section>
 
         <!-- footer -->
@@ -552,6 +596,7 @@
 
     </main>
 
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>

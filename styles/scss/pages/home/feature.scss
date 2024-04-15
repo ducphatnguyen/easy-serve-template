@@ -55,7 +55,7 @@
             display: flex;
             align-items: center;
 
-            margin: 0 16px;
+            padding: 0 16px;
         }
 
         &-content {
@@ -67,7 +67,7 @@
 
     &__contact {
         &-submit {
-            margin: 8px 0;
+            text-align: center;
         }
         &-thrill {
             font-size: 1.6rem;
@@ -121,8 +121,6 @@
             width: 100%;
     
             &-icon {
-                margin-left: 16px;
-                margin-right: 16px;
                 display: flex;
                 align-items: center;
             }
@@ -137,21 +135,15 @@
     
         &__contact {
             &-submit {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 8px 0;
+                text-align: center;
             }
-    
             &-thrill {
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 font-size: 1.6rem;
                 font-weight: 400;
                 line-height: 2.4rem;
             }
         }
+        
     }
 
 }

@@ -2,16 +2,17 @@
 .solution {
     display: flex;
     justify-content: center;
-    
+
     background: url("../../assets/solution/solution-background.png");
     background-size: cover;
 
     &__container {
-        width: 1010px;
-        padding: 112px 0;
         display: flex;
         flex-direction: column;
         row-gap: 90px;
+
+        width: 1010px;
+        padding: 100px 0;
     }
 
     &__info {
@@ -19,6 +20,7 @@
         margin: 0 auto;
         text-align: center;
         color: var(--color-white);
+
         &-title {
             font-size: 3.8rem;
             font-weight: 500;
@@ -34,7 +36,6 @@
     }
 
     &__img {
-        // width: 420px;
         &-description {
             font-size: 2rem;
             font-weight: 400;
@@ -42,6 +43,7 @@
             text-align: center;
             color: var(--color-white);
             margin-top: 20px;
+
             &--mt-3 {
                 margin-top: 52px;
             }
@@ -64,25 +66,9 @@
 // Responsive for solution
 @media screen and (max-width: 768px) {
     .solution {
-        
+
         &__container {
-
             width: 100%;
-
-            &--absolute-image {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                transform: rotate(90deg);
-
-                top: 670px;
-                left: calc(50% - 32px);
-
-                > img {
-                    width: 80px;
-                    height: 75px;
-                }
-            }
         }
 
         &__info {
@@ -97,25 +83,16 @@
                 font-size: 3rem;
                 line-height: 3.8rem;
             }
-
-            &-content {
-                margin: 10px 0;
-            }
         }
 
         &__img {
-            &:first-child {
-                margin-bottom: 120px;
-            }
             position: relative;
 
             margin-top: 0;
-            max-width: 90%;
-            
+            padding: 0 16px;
             &-item {
-                max-width: 100%;
-                height: 100%;
-                object-fit: cover; 
+                width: 100%;
+                object-fit: cover;
             }
 
             &-description {
@@ -136,7 +113,19 @@
         flex-direction: column;
         align-items: center;
         justify-content: unset;
-      
+        gap: 200px;
+
+        &--absolute-image {
+            transform: rotate(90deg);
+
+            top: 400px;
+            left: calc(50% - 32px);
+
+            >img {
+                width: 80px;
+                height: 75px;
+            }
+        }
     }
 
 }

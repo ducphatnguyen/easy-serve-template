@@ -2,23 +2,23 @@
 .contact {
     position: relative;
 
-    &__background {
-        &-first {
-            height: 710px;
-            background: url('../../assets/header/header-background.png');
-            background-size: cover;
-        }
+    &__container {
+        height: 710px;
+        background: url('../../assets/header/header-background.png');
+        background-size: cover;
+    }
 
-        &-second {
+    &__background {
+        &-overlay {
             position: absolute;
             bottom: 0;
 
             background: url('../../assets/contact/mechanic.png');
             background-repeat: no-repeat;
             background-size: contain;
-            background-position: 982px bottom;
+            background-position: right bottom;
 
-            height: 806px;
+            height: 792px;
             width: 100%;
         }
     }
@@ -29,7 +29,7 @@
         top: 90px;
         left: 160px;
 
-        width: 369px;
+        width: 368px;
         padding: 12px 0;
 
         &-header {
@@ -43,7 +43,7 @@
             font-weight: 400;
             line-height: 2.8rem;
             color: var(--color-white);
-            margin: 24px 0;
+            padding: 24px 0;
         }
 
         &-footer {
@@ -70,7 +70,7 @@
         position: absolute;
         z-index: 1;
         top: 90px;
-        left: 730px;
+        right: 300px;
 
         padding: 40px;
 
@@ -93,10 +93,10 @@
             &-item {
                 width: 100%;
                 padding: 5px 12px 5px 12px;
-                
+
                 border: 1px solid rgba(213, 216, 221, 1);
                 border-radius: 2px;
-         
+
                 &--text-area {
                     padding: 14px 0;
                 }
@@ -105,7 +105,7 @@
 
         &-submit {
             display: flex;
-            
+
             &-button {
                 margin-right: 28px;
             }
@@ -143,27 +143,25 @@
 @media screen and (max-width: 768px) {
     .contact {
         position: unset;
-      
+
+        &__container {
+            height: 1012px;
+            background: url('../../assets/header/header-background.png');
+            background-size: cover;
+            width: 100%;
+            padding: 80px 16px;
+        }
 
         &__background {
-            &-first {
-
-                height: 1012px;
-                background: url('../../assets/header/header-background.png');
-                background-size: cover;
-                width: 100%;
-                padding: 80px 16px;
-            }
-    
-            &-second {
+            &-overlay {
                 // position: unset;
                 display: none;
             }
         }
-    
+
         &__info {
             position: unset;
-    
+
             width: 100%;
             padding: 0;
             margin-bottom: 24px;
@@ -173,62 +171,63 @@
                 line-height: 3.8rem;
                 text-align: center;
             }
+
             &-body {
                 text-align: center;
             }
-    
+
             &-footer {
                 backdrop-filter: blur(10px);
                 border-radius: 8px;
                 border: 0.9px solid rgba(255, 255, 255, 0.3);
-    
+
                 padding: 40px;
                 background-color: rgba(255, 255, 255, 0.01);
-    
+
                 &-title {
                     font-size: 16px;
                     font-weight: 500;
                     line-height: 2.4rem;
                 }
-    
+
                 &-support {
                     margin-top: 24px;
                 }
             }
         }
-    
+
         &__form {
             position: unset;
-    
+
             &-control {
                 width: 100%;
                 margin-bottom: 16px;
             }
-    
+
             &-label {
                 padding: 4px 0;
                 font-size: 1.4rem;
                 line-height: 2.2rem;
                 font-weight: 400;
             }
-    
+
             &-input {
                 &-item {
                     width: 100%;
                     padding: 5px 12px 5px 12px;
-                    
+
                     border: 1px solid rgba(213, 216, 221, 1);
                     border-radius: 2px;
-             
+
                     &--text-area {
                         padding: 14px 0;
                     }
                 }
             }
-    
+
             &-submit {
                 justify-content: space-between;
-    
+
                 &-policy {
                     color: var(--color-subtext);
                     font-size: 1.2rem;
@@ -236,10 +235,10 @@
                     line-height: 2rem;
                 }
             }
-    
+
         }
     }
-    
+
     .footer-support {
         &__mobile {
             color: var(--color-white);
@@ -248,7 +247,7 @@
             line-height: 3.2rem;
             padding-bottom: 6px;
         }
-    
+
         &__email {
             color: var(--color-white);
             font-size: 2.4rem;
@@ -257,6 +256,6 @@
             padding-bottom: 6px;
         }
     }
-    
+
 
 }

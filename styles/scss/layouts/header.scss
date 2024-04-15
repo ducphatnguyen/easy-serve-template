@@ -10,8 +10,9 @@
     &__navbar {
         padding: 40px 20px 0;
         max-width: 1124px;
+       
         margin: 0 auto;
-
+        
         display: flex;
         align-items: center;
 
@@ -26,7 +27,6 @@
             margin-right: auto;
 
         }
-
         &-item {
 
             font-size: 1.6rem;
@@ -38,7 +38,6 @@
                 color: var(--color-white);
             }
         }
-
         &-links {
             &-login {
                 font-size: 1.6rem;
@@ -51,9 +50,88 @@
             }
         }
 
-        &-burger {
-            display: none;
+        &-burger, &-cross {
+            position: absolute;
+            right: 20px;
+            z-index: 99999;
+
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.25s ease-in-out;
         }
+
+        &-dropdown {
+            
+            // Animation
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.25s linear;
+            height: 0;
+
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 9999;
+
+            background-color: rgba(5, 18, 48, 1);
+          
+            width: 100%;
+           
+            padding: 0 16px 16px;
+           
+            &-list {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                
+
+                list-style: none;
+                padding: 24px 0;
+                margin: 0;
+                font-size: 1.6rem;
+                font-weight: 500;
+                line-height: 2.4rem;
+                border-top: 1px solid #ccc; 
+                border-bottom: 1px solid #ccc; 
+
+                & a {
+                    text-decoration: none;
+                    color: var(--color-white);
+                    display: block;
+                }
+            }
+            &-links {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            &-info {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                color: var(--color-white);
+                padding: 24px 0;
+            }
+            &-title {
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                font-weight: 500;
+            }
+
+            &-description {
+                font-size: 1.4rem;
+                line-height: 1.7rem;
+            }
+
+            &-social-networks {
+                > img {
+                    margin-right: 8px;
+                }
+            } 
+
+        }
+
     }
 
     // Content
@@ -91,6 +169,14 @@
         display: flex;
         justify-content: center;
         
+        &-item--desktop {
+            display: block;
+        }
+        &-item--mobile {
+            display: none;
+            
+        }
+        
     }
 }
 
@@ -98,33 +184,52 @@
 @media screen and (max-width: 768px) {
     .header {
         &__container {
-            padding: 0;
             height: 852px;
         }
 
         &__navbar {
+            position: relative;
+            z-index: 99999;
+
+            width: 100%;
             padding: 16px 24px;
-            justify-content: space-between;
 
-            &-list {
-                display: none;
-            }
-
-            &-links {
+            &-list--hide, &-links--hide {
                 display: none;
             }
 
             &-burger {
-                display: block;
+                opacity: 1;
+                visibility: visible;
             }
+            // Class để thêm 
+            &-burger--hide {
+                opacity: 0;
+                visibility: hidden;
+            }
+            &-cross--show {
+                opacity: 1;
+                visibility: visible;
+                transform: rotate(360deg);
+            }
+
+            &-dropdown--show {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                // Show animation
+                opacity: 1;
+                visibility: visible;
+                height: calc(100vh - 72px);
+            }
+
         }
 
         // Content
         &__content {
             width: 100%;
-            padding: 0 16px;
-            
-            top: 80px;
+            padding: 46px 16px;
             &-title {
                 font-size: 3rem;
                 line-height: 3.8rem;
@@ -137,13 +242,14 @@
 
         // Image
         &__image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            // max-width: 768px;
+            &-item--desktop {
+                display: none;
+            }
+            &-item--mobile {
+                display: block;
+            } 
             >img {
                 width: 100%;
-                height: 454px;
             }
         }
 

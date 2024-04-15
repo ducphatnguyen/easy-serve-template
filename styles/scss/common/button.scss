@@ -8,22 +8,25 @@
     font-size: 16px;
 }
 
+/* Button Color */
 .button--success {
     background: linear-gradient(124.32deg, #31CB9E 0.01%, #0FAAA2 100.02%);
 }
 
-.button--sm {
-    width: 80px;
-}
-
 .button--transparent {
     background: transparent;
-    color: var(--white-color);
+    border: 1px solid rgba(255, 255, 255, 1);
+    color: var(--color-white);
 }
 
-/* Additional Button Styles */
 .button--danger {
     background-color: #FF6347;
+}
+
+/* Additional Button Sizes */
+
+.button--sm {
+    width: 80px;
 }
 
 .button--lg {
