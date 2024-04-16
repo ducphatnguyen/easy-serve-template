@@ -44,7 +44,7 @@
                 </ul>
                 <!-- Link -->
                 <div class="header__navbar-links header__navbar-links--hide">
-                    <a class="header__navbar-links-login">
+                    <a href="#" class="header__navbar-links-login">
                         Login
                     </a>
                     <button class="button button--success">
@@ -117,6 +117,9 @@
         </div>
     </header>
 
+
+
+
     <!-- Main Content -->
     <main>
         <!-- Service -->
@@ -133,7 +136,7 @@
 
                 <div class="service__card-list">
 
-                    <div class="service__card">
+                    <div class="service__card fade">
                         <div class="service__card-body">
                             <img class="card-body__icon-img" src="./assets/service/booking-reminders.png"
                                 alt="Booking reminders">
@@ -148,7 +151,7 @@
                         </div>
                     </div>
 
-                    <div class="service__card">
+                    <div class="service__card fade">
                         <div class="service__card-body">
                             <img class="card-body__icon-img" src="./assets/service/mobility-convenience.png"
                                 alt="Mobility & Convinience">
@@ -164,7 +167,7 @@
                         </div>
                     </div>
 
-                    <div class="service__card">
+                    <div class="service__card fade">
                         <div class="service__card-body">
                             <img class="card-body__icon-img" src="./assets/service/customer-retention.png"
                                 alt="Customer Retention">
@@ -178,6 +181,19 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- <div class="dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div> -->
+
+                <div class="dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+
             </div>
         </section>
 
@@ -390,7 +406,8 @@
                 <div class="testimonial__card-list">
                     <div class="testimonial__card-item testimonial__card-item--md">
                         <div class="testimonial__card-item-icon">
-                            <img class="testimonial__card-item-img testimonial__card-item-img--first" src="./assets/testimonial/quote.png" alt="Quote">
+                            <img class="testimonial__card-item-img testimonial__card-item-img--first"
+                                src="./assets/testimonial/quote.png" alt="Quote">
                         </div>
                         <div class="testimonial__card-item-content testimonial__card-item-content--card-blur">
                             Since implementing the easyserv online booking tool, we have seen a massive uplift in online
@@ -402,7 +419,8 @@
 
                     <div class="testimonial__card-item testimonial__card-item--sm testimonial__card-item--center">
                         <div class="testimonial__card-item-icon">
-                            <img class="testimonial__card-item-img testimonial__card-item-img--second" src="./assets/testimonial/motorserve.png" alt="Quote">
+                            <img class="testimonial__card-item-img testimonial__card-item-img--second"
+                                src="./assets/testimonial/motorserve.png" alt="Quote">
                         </div>
                         <div class="testimonial__card-item-content testimonial__card-item-content--card-transparency">
                             <div class="testimonial__card-item-title">Tony Eljiz</div>
@@ -592,6 +610,9 @@
                 <button class="button button--success">Contact us</button>
             </div>
         </footer>
+
+
+
     </main>
 
     <script src="./scripts/main.js"></script>

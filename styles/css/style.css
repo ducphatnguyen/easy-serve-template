@@ -28,6 +28,24 @@ body {
     opacity: 1;
   }
 }
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
 @keyframes growth {
   from {
     transform: scale(var(--growth-from));
@@ -36,6 +54,11 @@ body {
     transform: scale(var(--growth-to));
   }
 }
+.growth {
+  animation-name: growth;
+  animation-duration: 1.5s;
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -79,6 +102,11 @@ body {
     transform: translateX(0);
   }
 }
+.slideIn {
+  animation-name: slideIn;
+  animation-duration: 1.5s;
+}
+
 @keyframes slideDown {
   from {
     transform: translateY(-100%);
@@ -393,10 +421,17 @@ body {
   text-decoration: none;
   color: var(--color-white);
 }
+.header__navbar-item-link:hover {
+  background-image: var(--color-primary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 .header__navbar-links {
   animation: moveLeft 1s ease forwards;
 }
 .header__navbar-links-login {
+  text-decoration: none;
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 2.4rem;
@@ -662,6 +697,7 @@ body {
     justify-content: unset;
     align-items: center;
     margin-top: 0;
+    margin-bottom: 80px;
     padding: 24px;
     text-align: center;
   }
@@ -672,6 +708,10 @@ body {
     padding: 0 24px;
   }
   .footer__end {
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(5, 18, 48, 0.9);
+    width: 100%;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -727,6 +767,27 @@ body {
   flex-basis: calc(33.3333333333% - 16px);
 }
 
+.dots {
+  text-align: center;
+  display: none;
+}
+
+.dot {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: rgb(49, 203, 158);
+}
+
 .card-body__icon-img {
   width: 80px;
   height: 80px;
@@ -763,7 +824,17 @@ body {
     padding: 0 40px;
   }
   .service__card-list {
-    flex-direction: column;
+    min-height: 400px;
+  }
+  .service__card {
+    display: none;
+  }
+  .service__card--active {
+    display: flex;
+    flex: 1;
+  }
+  .dots {
+    display: block;
   }
 }
 /* =====================================BOOKING================================= */
