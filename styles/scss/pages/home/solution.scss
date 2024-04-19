@@ -92,7 +92,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: unset;
-        gap: 200px;
+        gap: 160px;
 
         &--absolute-image {
             transform: rotate(90deg);
@@ -101,7 +101,7 @@
             left: calc(50% - 32px);
 
             >img {
-                width: 76px;
+                // width: 76px;
                 height: 80px;
             }
         }

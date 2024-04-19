@@ -22,15 +22,14 @@ crossIcon.addEventListener('click', function (e) {
     headerNavbar.classList.toggle('header__navbar--mobile-bg');
 });
 
-
 /* Service */
 // Slider Mobile
 document.addEventListener("DOMContentLoaded", function () {
-
     const carousel = document.querySelector('.service__card-list');
     const slides = document.querySelectorAll('.service__card-body');
     const dotsContainer = document.querySelector('.dots');
 
+    let currentIndex = 0;
     // Tạo các dấu chấm tương ứng với số lượng card
     slides.forEach((slide, i) => {
         const dot = document.createElement('span');
@@ -44,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    let currentIndex = 0;
     function nextSlide() {
         let nextIndex = currentIndex + 1;
         if (nextIndex === slides.length) {
@@ -53,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
         showSlide(nextIndex);
         currentIndex = nextIndex;
     }
+
 
     function showSlide(index) {
         // Ẩn tất cả các card
@@ -86,11 +85,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* Footer */
 // 1.scroll animation popup
-var lastScrollTop = 0;
-var footer = document.getElementsByClassName("footer__end")[0];
-
+let lastScrollTop = 0;
+let footer = document.getElementsByClassName("footer__end")[0];
 window.addEventListener("scroll", function () {
-    const currentScroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+    const currentScroll = window.scrollY || document.documentElement.scrollTop;
     const clientHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
     const scrollHeight = document.documentElement.scrollHeight;
     if (currentScroll < lastScrollTop || scrollHeight - currentScroll <= clientHeight) {
@@ -106,7 +104,7 @@ window.addEventListener("scroll", function () {
 
 // Hàm kiểm tra xem phần tử có trong tầm nhìn hay không
 function isInViewport(element) {
-    var rect = element.getBoundingClientRect();
+    const rect = element.getBoundingClientRect();
     return (
         rect.top >= 0 &&
         rect.left >= 0 &&
@@ -114,19 +112,21 @@ function isInViewport(element) {
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
+
 // Hàm thực hiện hiệu ứng animate khi phần tử vào tầm nhìn
 function animateOnScroll() {
-    var elements = document.querySelectorAll('.animated');
+    const elements = document.querySelectorAll('.animated');
     elements.forEach(function(element) {
         if (isInViewport(element)) {
-            var animation = element.getAttribute('data-animate');
+            const animation = element.getAttribute('data-animate');
             element.classList.add(animation);
         }
     });
 }
+
 // Gọi hàm animateOnScroll khi cuộn trang hoặc thay đổi kích thước cửa sổ
 window.addEventListener('scroll', animateOnScroll);
 window.addEventListener('resize', animateOnScroll);
-// Gọi hàm animateOnScroll khi trang được tải
-document.addEventListener('DOMContentLoaded', animateOnScroll);
+// // Gọi hàm animateOnScroll khi trang được tải
+// document.addEventListener('DOMContentLoaded', animateOnScroll);
 
