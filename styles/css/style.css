@@ -468,6 +468,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  transition: width 0.5s ease-in-out;
 }
 .header__navbar-links {
   animation: moveLeft 1s ease forwards;
@@ -1029,7 +1030,7 @@ body {
 .solution__container {
   display: flex;
   flex-direction: column;
-  row-gap: 90px;
+  row-gap: 80px;
   width: 1010px;
   padding: 100px 0;
 }
@@ -1337,7 +1338,7 @@ body {
 .contact__info-footer {
   backdrop-filter: blur(10px);
   border-radius: 8px;
-  border: 0.9px solid rgba(255, 255, 255, 0.3);
+  border: 0.9px solid rgba(255, 255, 255, 0.01);
   padding: 40px;
   background-color: rgba(255, 255, 255, 0.01);
 }

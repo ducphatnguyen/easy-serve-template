@@ -52,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
         currentIndex = nextIndex;
     }
 
-
     function showSlide(index) {
         // Ẩn tất cả các card
         slides.forEach(slide => {
@@ -130,3 +129,10 @@ window.addEventListener('resize', animateOnScroll);
 // // Gọi hàm animateOnScroll khi trang được tải
 // document.addEventListener('DOMContentLoaded', animateOnScroll);
 
+// Click and Scroll 
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('#scroll-button').addEventListener('click', function() {
+        const scrollTarget = document.querySelector('#scroll-position');
+        scrollTarget.scrollIntoView({ behavior: 'smooth' });
+    });
+});
