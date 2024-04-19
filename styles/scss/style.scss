@@ -4,7 +4,7 @@
 @import "./main.scss";
 
 // Animation
-@import "./animation/animation.scss";
+@import "./animations/main.scss";
 
 // Common Elements (General Components)
 @import "./common/button.scss";
@@ -27,4 +27,5 @@
 @import "./pages/home/feature.scss";
 @import "./pages/home/testimonial.scss";
 @import "./pages/home/contact.scss";
+@import "./pages/home/auth.scss";
 

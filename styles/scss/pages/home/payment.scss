@@ -4,22 +4,24 @@
     display: flex;
 
     &__img {
-        width: 825px;
-        height: 612px;
-        background-image: url('../../assets/payment/payment-girl.png');
+        // width: 100%;
+        width: 792px;
+        // height: 612px;
+        background-image: url('../../assets/payment/payment-girl2.jpg');
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: left 104px;
+        background-position: left bottom;
+        aspect-ratio: 16/9;
     }
 
     &__container {
-        padding-top: 168px;
+        padding-top: 50px;
+
     }
 
     &__info {
-        max-width: 456px;
         width: 100%;
-
+        max-width: 456px;
         display: flex;
         flex-direction: column;
         row-gap: 20px;
@@ -60,9 +62,11 @@
 
         &__img {
             width: 100%;
-            background-size: cover;
-            background-position: center 62px;
+            background-size: contain;
+            background-position: center;
             order: 2;
+            aspect-ratio: 16 / 9;
+            height: auto;
         }
 
         &__info {

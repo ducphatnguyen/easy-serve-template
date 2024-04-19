@@ -1,5 +1,5 @@
 
-// Header
+/* Header */
 const burgerIcon = document.querySelector('.header__navbar-burger');
 const crossIcon = document.querySelector('.header__navbar-cross');
 
@@ -23,46 +23,69 @@ crossIcon.addEventListener('click', function (e) {
 });
 
 
-let slideIndex = 0;
+/* Service */
+// Slider Mobile
+document.addEventListener("DOMContentLoaded", function () {
 
-showSlides();
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-function showSlides() {
-    let i;
-    
-    // Cards
-    let slides = document.getElementsByClassName("service__card");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].classList.add('fadeIn');
-        slides[i].classList.remove('service__card--active');
+    const carousel = document.querySelector('.service__card-list');
+    const slides = document.querySelectorAll('.service__card-body');
+    const dotsContainer = document.querySelector('.dots');
+
+    // Tạo các dấu chấm tương ứng với số lượng card
+    slides.forEach((slide, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        dotsContainer.appendChild(dot);
+
+        // Gán sự kiện click cho mỗi dấu chấm để chuyển đến card tương ứng
+        dot.addEventListener('click', function () {
+            showSlide(i);
+            currentIndex = i;
+        });
+    });
+
+    let currentIndex = 0;
+    function nextSlide() {
+        let nextIndex = currentIndex + 1;
+        if (nextIndex === slides.length) {
+            nextIndex = 0;
+        }
+        showSlide(nextIndex);
+        currentIndex = nextIndex;
     }
-    if (slideIndex >= slides.length) {
-        slideIndex = 0;
+
+    function showSlide(index) {
+        // Ẩn tất cả các card
+        slides.forEach(slide => {
+            slide.classList.remove('service__card-body--active');
+        });
+        // Hiển thị card tương ứng với chỉ số index
+        slides[index].classList.add('service__card-body--active');
+        // Thay đổi class của carousel để áp dụng transform
+        carousel.className = 'service__card-list'; // Đảm bảo xóa hết các class trước
+        if (index === 0) {
+            carousel.classList.add('service__card-list--translate-1');
+        } else if (index === 1) {
+            carousel.classList.add('service__card-list--translate-2');
+        } else {
+            carousel.classList.add('service__card-list--translate-3');
+        }
+
+        // Highlight dấu chấm tương ứng
+        const dots = document.querySelectorAll('.dot');
+        dots.forEach((dot, dotIndex) => {
+            dot.classList.remove('active');
+            if (dotIndex === index) {
+                dot.classList.add('active');
+            }
+        });
     }
-
-    // Dots
-    let dots = document.getElementsByClassName("dot");
-    for (i = 0; i < dots.length; i++) {
-        dots[i].classList.remove("active");
-    }
-
-    slides[slideIndex].classList.add('service__card--active');
-    dots[slideIndex].classList.add("active");
-    slideIndex++;
-
-    setTimeout(showSlides, 2000);
-}
+    setInterval(nextSlide, 3000); // Đổi slide mỗi 3 giây (3000ms)
+});
 
 
-
-
-// Footer
-//scroll animation popup
+/* Footer */
+// 1.scroll animation popup
 var lastScrollTop = 0;
 var footer = document.getElementsByClassName("footer__end")[0];
 
@@ -80,4 +103,30 @@ window.addEventListener("scroll", function () {
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 }, false);
 
+
+// Hàm kiểm tra xem phần tử có trong tầm nhìn hay không
+function isInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+// Hàm thực hiện hiệu ứng animate khi phần tử vào tầm nhìn
+function animateOnScroll() {
+    var elements = document.querySelectorAll('.animated');
+    elements.forEach(function(element) {
+        if (isInViewport(element)) {
+            var animation = element.getAttribute('data-animate');
+            element.classList.add(animation);
+        }
+    });
+}
+// Gọi hàm animateOnScroll khi cuộn trang hoặc thay đổi kích thước cửa sổ
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('resize', animateOnScroll);
+// Gọi hàm animateOnScroll khi trang được tải
+document.addEventListener('DOMContentLoaded', animateOnScroll);
 

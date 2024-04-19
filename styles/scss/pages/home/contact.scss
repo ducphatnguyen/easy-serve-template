@@ -1,11 +1,15 @@
 /* =====================================CONTACT================================= */
 .contact {
     position: relative;
-
     &__container {
-        height: 710px;
+        // height: 710px;
         background: url('../../assets/header/header-background.png');
         background-size: cover;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+        padding: 90px 270px 180px 160px;
     }
 
     &__background {
@@ -24,13 +28,14 @@
     }
 
     &__info {
-        position: absolute;
+        // position: absolute;
+        // top: 90px;
+        // left: 160px;
         z-index: 1;
-        top: 90px;
-        left: 160px;
+      
 
         width: 368px;
-        padding: 12px 0;
+        // padding: 12px 0;
 
         &-header {
             font-size: 3.8rem;
@@ -61,16 +66,16 @@
             }
 
             &-support {
-                margin-top: 24px;
+                padding-top: 24px;
             }
         }
     }
 
     &__form {
-        position: absolute;
+        // position: absolute;
+        // top: 90px;
+        // right: 300px;
         z-index: 1;
-        top: 90px;
-        right: 300px;
 
         padding: 40px;
 
@@ -115,6 +120,8 @@
                 font-size: 1.2rem;
                 font-weight: 400;
                 line-height: 2rem;
+
+                max-width: 180px;
             }
         }
 
@@ -130,7 +137,8 @@
         font-size: 2.4rem;
         font-weight: 500;
         line-height: 3.2rem;
-        padding-bottom: 6px;
+        padding-bottom: 12px;
+        flex-wrap: wrap;
     }
 
     &__email {
@@ -141,18 +149,17 @@
         font-size: 2.4rem;
         font-weight: 500;
         line-height: 3.2rem;
-        padding-bottom: 6px;
+        flex-wrap: wrap;
     }
 }
 
 // Responsive for contact
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     .contact {
         position: unset;
-
         &__container {
             width: 100%;
-            min-height: 1012px;
+            // min-height: 1012px;
             padding: 80px 16px;
         }
 
@@ -164,9 +171,8 @@
         }
 
         &__info {
-            position: unset;
             width: 100%;
-            margin-bottom: 24px;
+            // margin-bottom: 24px;
 
             &-header {
                 font-size: 3rem;
@@ -178,14 +184,10 @@
                 text-align: center;
             }
 
-            &-footer {
-                padding: 12px;
-            }
         }
 
         &__form {
-            position: unset;
-
+            width: 100%;
             &-control {
                 width: 100%;
             }
@@ -193,11 +195,32 @@
             &-submit {
                 justify-content: space-between;
                 gap: 12px;
+                flex-wrap: wrap;
                 &-button {
                     margin-right: 0;
                 }
+                &-policy {
+                   
+                }
             }
 
+        }
+    }
+    .footer-support {
+        &__mobile {
+            font-size: clamp(
+          0.5rem,
+          -1.2482517482517483rem + 11.188811188811188vw,
+          2rem
+        );
+        }
+    
+        &__email {
+            font-size: clamp(
+          0.5rem,
+          -1.2482517482517483rem + 11.188811188811188vw,
+          2rem
+        );
         }
     }
 

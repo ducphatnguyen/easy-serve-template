@@ -5,28 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internship - Ex2</title>
+    
+    <link rel="stylesheet" href="styles/css/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/css/style.css">
+
 </head>
 
 <body>
-
-    <!-- Header -->
+    <!-- ============================================Header============================================ -->
     <header class="header">
         <div class="header__container">
             <!-- 1. Navbar -->
             <nav class="header__navbar">
-
                 <div class="header__navbar-logo">
                     <a href="#" class="header__navbar-logo-link">
                         <img src="./assets/logo.png" alt="Logo">
                     </a>
                 </div>
-
                 <!-- List  -->
                 <ul class="header__navbar-list header__navbar-list--hide">
                     <li class="header__navbar-item">
@@ -52,18 +54,15 @@
                     </button>
                 </div>
 
-
                 <!-- ========================MOBILE========================= -->
                 <!-- Burger Toggle -->
                 <div class="header__navbar-burger">
                     <img src="./assets/header/burger-menu.png" alt="Menu Icon">
                 </div>
-
                 <!-- Cross Toggle -->
                 <div class="header__navbar-cross">
                     <img src="./assets/header/cross-menu.png" alt="Menu Icon">
                 </div>
-
                 <!-- Dropdown Menu -->
                 <div class="header__navbar-dropdown">
                     <div class="header__navbar-dropdown-wrap">
@@ -83,20 +82,16 @@
                             <img src="./assets/footer/instagram.png" alt="Instagram">
                             <img src="./assets/footer/linked-in.png" alt="LinkedIn">
                         </div>
-
                     </div>
-
                     <div class="header__navbar-dropdown-links">
                         <button class="button button--transparent">Login</button>
                         <button class="button button--success">Contact us</button>
                     </div>
-
                 </div>
-
             </nav>
 
             <!-- 2. Content -->
-            <div class="header__content">
+            <div class="header__content animated" data-animate="fadeIn">
                 <div class="header__content-title">
                     The
                     <span class="text-primary">EASY</span>
@@ -109,20 +104,16 @@
             </div>
 
             <!-- 3. Img -->
-            <div class="header__image">
+            <div class="header__image animated" data-animate="fadeIn">
                 <img class="header__image-item--desktop" src="./assets/header/hero-image.png" alt="Hero Image">
-                <img class="header__image-item--mobile" src="./assets/header/hero-mobile.png" alt="Hero Image">
+                <!-- <img class="header__image-item--mobile" src="./assets/header/hero-mobile.png" alt="Hero Image"> -->
             </div>
-
         </div>
     </header>
 
-
-
-
     <!-- Main Content -->
     <main>
-        <!-- Service -->
+        <!-- ============================================Service============================================ -->
         <section class="service">
 
             <div class="service__container">
@@ -136,68 +127,54 @@
 
                 <div class="service__card-list">
 
-                    <div class="service__card fade">
-                        <div class="service__card-body">
-                            <img class="card-body__icon-img" src="./assets/service/booking-reminders.png"
-                                alt="Booking reminders">
-                            <div class="card-body__container card-body__container--short">
-                                <span class="card-body__container-title">Booking reminders</span>
-                                <p class="card-body__container-content">
-                                    With Easyserv, your customers will receive booking
-                                    reminders via email & sms the day before their
-                                    booking. Timely reminders help to increase customer satisfaction and avoid no shows
-                                </p>
-                            </div>
+                    <div class="service__card-body service__card-body--active">
+                        <img class="card-body__icon-img" src="./assets/service/booking-reminders.png"
+                            alt="Booking reminders">
+                        <div class="card-body__container card-body__container--short">
+                            <span class="card-body__container-title">Booking reminders</span>
+                            <p class="card-body__container-content">
+                                With Easyserv, your customers will receive booking
+                                reminders via email & sms the day before their
+                                booking. Timely reminders help to increase customer satisfaction and avoid no shows
+                            </p>
                         </div>
                     </div>
 
-                    <div class="service__card fade">
-                        <div class="service__card-body">
-                            <img class="card-body__icon-img" src="./assets/service/mobility-convenience.png"
-                                alt="Mobility & Convinience">
-                            <div class="card-body__container card-body__container--tall">
-                                <span class="card-body__container-title">Mobility & Convenience</span>
-                                <p class="card-body__container-content">
-                                    Over 50% of medical appointments are booked online,
-                                    and 80% of those are via mobile devices. Easyserv makes it EASY for your customers
-                                    to
-                                    book their service on any device, any time ensuring your business stays current with
-                                    evolving consumer preferences</p>
-                            </div>
+                    <div class="service__card-body">
+                        <img class="card-body__icon-img" src="./assets/service/mobility-convenience.png"
+                            alt="Mobility & Convinience">
+                        <div class="card-body__container card-body__container--tall">
+                            <span class="card-body__container-title">Mobility & Convenience</span>
+                            <p class="card-body__container-content">
+                                Over 50% of medical appointments are booked online,
+                                and 80% of those are via mobile devices. Easyserv makes it EASY for your customers
+                                to
+                                book their service on any device, any time ensuring your business stays current with
+                                evolving consumer preferences</p>
                         </div>
                     </div>
-
-                    <div class="service__card fade">
-                        <div class="service__card-body">
-                            <img class="card-body__icon-img" src="./assets/service/customer-retention.png"
-                                alt="Customer Retention">
-                            <div class="card-body__container card-body__container--short">
-                                <span class="card-body__container-title">Customer retention</span>
-                                <p class="card-body__container-content">Easyserv stores customer details and offers a
-                                    portal
-                                    for self-service, displaying service history and upcoming appointments. It boosts
-                                    loyalty and retention by providing an enjoyable customer experience</p>
-                            </div>
+                    <div class="service__card-body">
+                        <img class="card-body__icon-img" src="./assets/service/customer-retention.png"
+                            alt="Customer Retention">
+                        <div class="card-body__container card-body__container--short">
+                            <span class="card-body__container-title">Customer retention</span>
+                            <p class="card-body__container-content">Easyserv stores customer details and offers a
+                                portal
+                                for self-service, displaying service history and upcoming appointments. It boosts
+                                loyalty and retention by providing an enjoyable customer experience</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- <div class="dots">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div> -->
 
                 <div class="dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                    <!-- Các dấu chấm sẽ được thêm bằng JavaScript -->
                 </div>
+
 
             </div>
         </section>
 
-        <!-- Booking -->
+        <!-- ============================================Booking============================================ -->
         <section class="booking">
             <div class="booking__container">
                 <div class="booking__info">
@@ -231,11 +208,10 @@
                     </button>
                 </div>
 
-
             </div>
         </section>
 
-        <!-- Payment -->
+        <!-- ============================================Payment============================================ -->
         <section class="payment">
             <div class="payment__img"></div>
             <div class="payment__container">
@@ -264,7 +240,7 @@
             </div>
         </section>
 
-        <!-- Solution -->
+        <!-- ============================================Solution============================================ -->
         <section class="solution">
             <div class="solution__container">
 
@@ -307,7 +283,7 @@
             </div>
         </section>
 
-        <!-- Feature -->
+        <!-- ============================================Feature============================================ -->
         <section class="feature">
 
             <div class="feature__container">
@@ -392,17 +368,13 @@
                     <p class="feature__contact-thrill">for a demonstration today!</p>
                 </div>
 
-                <!-- <div >
-                    
-                </div> -->
-
             </div>
         </section>
 
-        <!-- Testimonial -->
+        <!-- ============================================Testimonial============================================ -->
         <section class="testimonial">
-            <div class="testimonial__container">
 
+            <div class="testimonial__container">
                 <div class="testimonial__card-list">
                     <div class="testimonial__card-item testimonial__card-item--md">
                         <div class="testimonial__card-item-icon">
@@ -433,8 +405,9 @@
             </div>
         </section>
 
-        <!-- Contact -->
+        <!-- ============================================Contact============================================ -->
         <section class="contact">
+            <div class="contact__background-overlay"></div>
             <div class="contact__container">
                 <div class="contact__info">
                     <div class="contact__info-header text-primary">
@@ -524,7 +497,7 @@
                             <button class="button button--success button--sm">Send</button>
                         </div>
                         <div class="contact__form-submit-policy">
-                            By clicking on “Send” button, <br>
+                            By clicking on “Send” button,
                             you agree to our
                             <span class="text-underlined">Privacy Policy</span>
                             .
@@ -533,12 +506,9 @@
 
                 </form>
             </div>
-
-            <div class="contact__background-overlay"></div>
-
         </section>
 
-        <!-- footer -->
+        <!-- ============================================Footer============================================ -->
         <footer class="footer">
 
             <div class="footer__container">
@@ -575,13 +545,29 @@
                 <div class="footer__contact">
                     <div class="footer__contact-info">
                         <div class="text-primary footer__contact-info-title">Contact us</div>
-                        <div class="footer__contact-info-description">+61 412 774 034</div>
-                        <div class="footer__contact-info-description">info@easyserv.au</div>
+                        <div class="footer__contact-info-description">
+                            <a href="tel:+61 412 774 034">
+                                +61 412 774 034
+                            </a>
+                        </div>
+                        <div class="footer__contact-info-description">
+                            <a href="mailto:info@easyserv.au">
+                                info@easyserv.au
+                            </a>
+
+                        </div>
                     </div>
                     <div class="footer__contact-social-networks">
-                        <img class="social-networks__img" src="./assets/footer/facebook.png" alt="Facebook">
-                        <img class="social-networks__img" src="./assets/footer/instagram.png" alt="Instagram">
-                        <img class="social-networks__img" src="./assets/footer/linked-in.png" alt="LinkedIn">
+                        <a href="https://www.facebook.com/" class="social-networks__link">
+                            <img class="social-networks__img" src="./assets/footer/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="https://www.instagram.com/" class="social-networks__link">
+                            <img class="social-networks__img" src="./assets/footer/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="https://www.linkedin.com/" class="social-networks__link">
+                            <img class="social-networks__img" src="./assets/footer/linked-in.png" alt="LinkedIn">
+                        </a>
+                        
                     </div>
 
                 </div>
@@ -611,10 +597,103 @@
             </div>
         </footer>
 
+        <!-- <div class="modal">
+            <div class="modal__overlay"></div>
+            <div class="modal__body">
+                <div class="auth-form">
+                    <div class="auth-form__container">
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">Đăng ký</h3>
+                            <span class="auth-form__switch-btn">Đăng nhập</span>
+                        </div>
 
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Email của bạn">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu của bạn">
+                            </div>
+                        </div>
+
+                        <div class="auth-form__aside">
+                            <p class="auth-form__policy-text">
+                                Bằng việc đăng ký, bạn đồng ý với F8-shop về
+                                <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a> &
+                                <a href="" class="auth-form__text-link">Chính sách bảo mật</a>
+                            </p>
+                        </div>
+
+                        <div class="auth-form__controls">
+                            <button class="btn btn--normal auth-form__controls-back">TRỞ LẠI</button>
+                            <button class="btn btn--primary">ĐĂNG KÝ</button>
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="auth-form__socials">
+                        <a class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                            <i class="auth-form__socials-icon fab fa-facebook-square"></i>
+                            <span class="auth-form__socials-title">Kết nối với Facebook</span>
+                        </a>
+                        <a class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                            <i class="auth-form__socials-icon fab fa-google"></i>
+                            <span class="auth-form__socials-title">Kết nối với Google</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="auth-form">
+                    <div class="auth-form__container">
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">Đăng nhập</h3>
+                            <span class="auth-form__switch-btn">Đăng ký</span>
+                        </div>
+
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Email của bạn">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
+                            </div>
+                        </div>
+
+                        <div class="auth-form__aside">
+                            <div class="auth-form__help">
+                                <a href="" class="auth-form__help-link auth-form__help-forgot">Quên mật khẩu</a>
+                                <span class="auth-form__help-separate"></span>
+                                <a href="" class="auth-form__help-link">Cần trợ giúp?</a>
+                            </div>
+                        </div>
+
+                        <div class="auth-form__controls">
+                            <button class="btn btn--normal auth-form__controls-back">TRỞ LẠI</button>
+                            <button class="btn btn--primary">ĐĂNG KÝ</button>
+                        </div>
+                    </div>
+                    
+                    <div class="auth-form__socials">
+                        <a class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                            <i class="auth-form__socials-icon fab fa-facebook-square"></i>
+                            <span class="auth-form__socials-title">Kết nối với Facebook</span>
+                        </a>
+                        <a class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                            <i class="auth-form__socials-icon fab fa-google"></i>
+                            <span class="auth-form__socials-title">Kết nối với Google</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div> -->
 
     </main>
-
     <script src="./scripts/main.js"></script>
 </body>
 

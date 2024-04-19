@@ -2,14 +2,14 @@
 .booking {
     display: flex;
     justify-content: center;
-
     &__container {
         // Question
-        width: 1120px;
+        // width: 1120px;
         display: flex;
         align-items: center;
-        position: relative;
-        padding: 72px 0;
+        justify-content: start;
+        padding: 0 16px;
+        // position: relative;
     }
 
     &__info {
@@ -32,12 +32,16 @@
             }
         }
     }
+    
     &__img {
-        position: absolute;
-        left: 0;
-        right: 0;
-        transform: translateX(50%);
-        margin-left: 40px;
+        // position: absolute;
+        // left: 0;
+        // right: 0;
+        // transform: translateX(50%);
+        // margin-left: 40px;
+        // padding: 0 16px;
+        // width: 100%;
+
     }
 }
 
@@ -49,26 +53,26 @@
 }
 
 // Responsive for booking
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     .booking {
         display: block;
         &__container {
             // Question
             width: 100%;
             display: block;
-            position: unset;
+            // position: unset;
+            padding: 60px 0;
         }
         &__info {
             padding: 0 16px;
-
             &-title {
                 font-size: 3rem;
                 line-height: 3.8rem;
             }
         }
         &__img {
-            position: unset;
-            transform: unset;
+            // position: unset;
+            // transform: unset;
             margin: 0;
             width: 100%;    
             padding: 50px 0;

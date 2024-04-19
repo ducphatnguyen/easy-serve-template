@@ -25,7 +25,7 @@
     }
 
     &__card-item {
-        width: 537px;
+        width: 50%;
         padding: 40px;
 
         &--center {
@@ -64,8 +64,8 @@
         &--md {
             backdrop-filter: blur(10px);
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border: 0.9px solid #FFFFFF4D;
+            // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #FFFFFF4D;
         }
 
         &--sm {

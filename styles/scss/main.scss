@@ -1,33 +1,30 @@
-// CSS For Libraries Or Custom SCSS
-// .carousel { 
-//     position: relative; 
-//     width: 270px; 
-//     height: 160px; 
-//     overflow: hidden; 
-//     background-color: #cdcdcd; 
-// } 
-  
-// .carousel-item .slide-image { 
-//     width: 270px; 
-//     height: 160px; 
-//     background-size: cover; 
-//     background-repeat: no-repeat; 
-// } 
-  
-// .carousel-item { 
-//     position: absolute; 
-//     width: 100%; 
-//     height: 270px; 
-//     border: none; 
-//     top: 0; 
-//     left: 100%; 
-// } 
-  
-// .carousel-item.active { 
-//     left: 0; 
-//     transition: all 0.3s ease-out; 
-// } 
-  
-// .carousel-item div { 
-//     height: 100%; 
-// } 
+.slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slider-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.slider-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.active {
+    display: block;
+}

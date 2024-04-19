@@ -23,21 +23,21 @@
 
         &-list {
             // Movedown
-            animation: moveDown 1s ease forwards;
-
-            list-style: none;
-
             display: flex;
             gap: 0 48px;
+
+            list-style: none;
 
             padding: 0;
             margin-left: 130px;
             margin-right: auto;
 
+            animation: moveDown 1s ease forwards;
+
+
         }
 
         &-item {
-
             font-size: 1.6rem;
 
             &-link {
@@ -75,6 +75,9 @@
 
         &-burger,
         &-cross {
+            // Pointer (?)
+            cursor: pointer;
+            
             position: absolute;
             right: 20px;
             z-index: 99999;
@@ -121,11 +124,7 @@
                     display: block;
 
                 }
-
-
             }
-
-
 
             &-links {
                 display: flex;
@@ -198,20 +197,16 @@
         display: flex;
         justify-content: center;
 
-        &-item--desktop {
-            display: block;
-        }
-
-        &-item--mobile {
-            display: none;
-
+        // Con trực tiếp
+        > img {
+            object-fit: cover;
         }
 
     }
 }
 
 // Responsive for header
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     .header {
         &__container {
             width: 100%;
@@ -263,7 +258,6 @@
                 visibility: visible;
                 height: calc(100vh - 72px);
             }
-
         }
 
         // Content
@@ -282,16 +276,10 @@
 
         // Image
         &__image {
-            &-item--desktop {
-                display: none;
-            }
-
-            &-item--mobile {
-                display: block;
-            }
 
             >img {
                 width: 100%;
+                aspect-ratio: 16 / 10;
             }
         }
 

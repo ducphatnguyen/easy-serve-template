@@ -11,9 +11,9 @@
     }
 }
 .fadeIn {
-    animation-name: fadeIn;
-    animation-duration: 1.5s;
+    animation: fadeIn 1s ease forwards;
 }
+
 
 @keyframes fade {
     from {
@@ -25,8 +25,7 @@
     }
 }
 .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+    animation: fade 1s ease forwards;
 }
 
 // Growth
@@ -40,8 +39,7 @@
     }
 }
 .growth {
-    animation-name: growth;
-    animation-duration: 1.5s;
+    animation: growth 1s ease forwards;
 }
 
 
@@ -111,8 +109,7 @@
     }
 }
 .slideIn {
-    animation-name: slideIn;
-    animation-duration: 1.5s;
+    animation: slideIn 1s ease forwards;
 }
 
 @keyframes slideDown {
@@ -123,6 +120,9 @@
     to {
         transform: translateY(0);
     }
+}
+.slideDown {
+    animation: slideDown 1s ease forwards;
 }
 
 
@@ -254,6 +254,10 @@
         transform: translateX(0);
     }
 }
+.moveRight {
+    animation: moveRight 1s ease forwards;
+}
+
 
 @keyframes moveDown {
     from {
@@ -264,6 +268,9 @@
         transform: translateY(0);
     }
 }
+.moveDown {
+    animation: moveDown 1s ease forwards;
+}
 
 @keyframes moveLeft {
     from {
@@ -273,5 +280,8 @@
     to {
         transform: translateX(0);
     }
+}
+.moveLeft {
+    animation: moveLeft 1s ease forwards;
 }
 

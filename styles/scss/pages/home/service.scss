@@ -23,25 +23,30 @@
         }
     }
 
+
+
     &__card-list {
         display: flex;
         gap: 24px;
-        max-width: 1120px;
-
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    &__card {
+    &__card-body {
+        width: 358px;
         background-color: var(--color-card);
         padding: 40px;
         border-radius: 8px;
-        flex-basis: calc(100%/3 - 16px);
+        flex-grow: 1;
     }
+
 }
 
 .dots {
     text-align: center;
     display: none;
 }
+
 .dot {
     cursor: pointer;
     height: 8px;
@@ -95,6 +100,7 @@
         &__container {
             width: 100%;
             padding: 16px;
+            overflow: hidden;
         }
 
         &__emphasis {
@@ -109,24 +115,43 @@
         }
 
         &__card-list {
-            min-height: 400px;
-        }
+            flex-wrap: nowrap;
+            justify-content: unset;
+            gap: 0;
 
-        // Test
-        &__card {
-            display: none;
-
-            &--active {
-                display: flex;
-                flex: 1;
+            width: calc(100vw - 32px);
+            transition: transform 0.5s ease;
+            &--translate-1 {
+                transform: translateX(0); 
+            }
+            &--translate-2 {
+                transform: translateX(-100%); 
+            }
+            
+            &--translate-3 {
+                transform: translateX(-200%); 
             }
 
         }
+
+        // Test
+        &__card-body {
+            flex: 0 0 auto;
+            width: 100%;
+            // height: auto;
+            opacity: 0;
+            visibility: visible;
+            &--active {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
     }
+
     .dots {
         display: block;
     }
-    
-   
-}
 
+
+}
