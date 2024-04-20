@@ -46,7 +46,7 @@
                 </ul>
                 <!-- Link -->
                 <div class="header__navbar-links header__navbar-links--hide">
-                    <a href="#" class="header__navbar-links-login">
+                    <a href="#" class="header__navbar-links-login button-login">
                         Login
                     </a>
                     <button class="button button--success">
@@ -84,7 +84,7 @@
                         </div>
                     </div>
                     <div class="header__navbar-dropdown-links">
-                        <button class="button button--transparent">Login</button>
+                        <button class="button button--transparent button-login">Login</button>
                         <button class="button button--success">Contact us</button>
                     </div>
                 </div>
@@ -595,104 +595,112 @@
                 <span class="footer__end-emphasis">The modern service experience must be EASY.</span>
                 <button class="button button--success" id="scroll-button">Contact us</button>
             </div>
-            
         </footer>
 
-        <!-- <div class="modal">
+        <div class="modal">
             <div class="modal__overlay"></div>
             <div class="modal__body">
-                <div class="auth-form">
+                <!-- Login Form -->
+                <div class="auth-form auth-form__login">
                     <div class="auth-form__container">
-                        <div class="auth-form__header">
-                            <h3 class="auth-form__heading">Đăng ký</h3>
-                            <span class="auth-form__switch-btn">Đăng nhập</span>
+                         <div class="auth-form__header">
+                            <div class="auth-form__logo">
+                                <img src="./assets/logo.png" alt="Logo">
+                            </div>
+                            <h3 class="auth-form__heading text-primary">Login</h3>
+                            <span class="auth-form__switch-btn" id="switch-register">Register</span>
                         </div>
 
                         <div class="auth-form__form">
                             <div class="auth-form__group">
-                                <input type="text" class="auth-form__input" placeholder="Email của bạn">
+                                <input type="text" class="auth-form__input" placeholder="Your Email">
                             </div>
                             <div class="auth-form__group">
-                                <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
-                            </div>
-                            <div class="auth-form__group">
-                                <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu của bạn">
-                            </div>
-                        </div>
-
-                        <div class="auth-form__aside">
-                            <p class="auth-form__policy-text">
-                                Bằng việc đăng ký, bạn đồng ý với F8-shop về
-                                <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a> &
-                                <a href="" class="auth-form__text-link">Chính sách bảo mật</a>
-                            </p>
-                        </div>
-
-                        <div class="auth-form__controls">
-                            <button class="btn btn--normal auth-form__controls-back">TRỞ LẠI</button>
-                            <button class="btn btn--primary">ĐĂNG KÝ</button>
-                        </div>
-
-                        
-                    </div>
-
-                    <div class="auth-form__socials">
-                        <a class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
-                            <i class="auth-form__socials-icon fab fa-facebook-square"></i>
-                            <span class="auth-form__socials-title">Kết nối với Facebook</span>
-                        </a>
-                        <a class="auth-form__socials--google btn btn--size-s btn--with-icon">
-                            <i class="auth-form__socials-icon fab fa-google"></i>
-                            <span class="auth-form__socials-title">Kết nối với Google</span>
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="auth-form">
-                    <div class="auth-form__container">
-                        <div class="auth-form__header">
-                            <h3 class="auth-form__heading">Đăng nhập</h3>
-                            <span class="auth-form__switch-btn">Đăng ký</span>
-                        </div>
-
-                        <div class="auth-form__form">
-                            <div class="auth-form__group">
-                                <input type="text" class="auth-form__input" placeholder="Email của bạn">
-                            </div>
-                            <div class="auth-form__group">
-                                <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
+                                <input type="password" class="auth-form__input" placeholder="Your Password">
                             </div>
                         </div>
 
                         <div class="auth-form__aside">
                             <div class="auth-form__help">
-                                <a href="" class="auth-form__help-link auth-form__help-forgot">Quên mật khẩu</a>
+                                <a href="" class="auth-form__help-link auth-form__help-forgot">Forgot password</a>
                                 <span class="auth-form__help-separate"></span>
-                                <a href="" class="auth-form__help-link">Cần trợ giúp?</a>
+                                <a href="" class="auth-form__help-link">Need help?</a>
                             </div>
                         </div>
 
                         <div class="auth-form__controls">
-                            <button class="btn btn--normal auth-form__controls-back">TRỞ LẠI</button>
-                            <button class="btn btn--primary">ĐĂNG KÝ</button>
+                            <button class="button button--normal auth-form__controls-back close-modal">BACK</button>
+                            <button class="button button--success auth-form__controls-login">LOGIN</button>
                         </div>
+
                     </div>
                     
                     <div class="auth-form__socials">
-                        <a class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
-                            <i class="auth-form__socials-icon fab fa-facebook-square"></i>
-                            <span class="auth-form__socials-title">Kết nối với Facebook</span>
+                         <a class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                            <i class="auth-form__socials-icon fab fa-facebook"></i>
                         </a>
-                        <a class="auth-form__socials--google btn btn--size-s btn--with-icon">
-                            <i class="auth-form__socials-icon fab fa-google"></i>
-                            <span class="auth-form__socials-title">Kết nối với Google</span>
+                        <a class="auth-form__socials--instagram btn btn--size-s btn--with-icon">
+                            <i class="auth-form__socials-icon fab fa-instagram"></i>
+                        </a>
+                        <a class="auth-form__socials--linked-in btn btn--size-s btn--with-icon">
+                            <i class="auth-form__socials-icon fab fa-linkedin-in"></i>
                         </a>
                     </div>
-
                 </div>
+
+                <!-- Regist Form -->
+                <div class="auth-form auth-form__register">
+                    <div class="auth-form__container">
+
+                        <div class="auth-form__header">
+                            <div class="auth-form__logo">
+                                <img src="./assets/logo.png" alt="Logo">
+                            </div>
+                            <span class="auth-form__heading text-primary">Register</span>
+                            <span class="auth-form__switch-btn" id="switch-login">Login</span>
+                        </div>
+
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Your email">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Your password">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Confirm your password">
+                            </div>
+                        </div>
+
+                        <div class="auth-form__aside">
+                            <p class="auth-form__policy-text">
+                                <input type="checkbox" id="" name="" value=""> By registration, you approved with Easy-serv about our
+                                <a href="" class="auth-form__text-link">Service Term</a> &
+                                <a href="" class="auth-form__text-link">Private Policy</a> 
+                            </p>
+                        </div>
+
+                        <div class="auth-form__controls">
+                            <button class="button button--normal auth-form__controls-back close-modal">BACK</button>
+                            <button class="button button--success auth-form__controls-regist">SUBMIT</button>
+                        </div>
+                    </div>
+
+                    <div class="auth-form__socials">
+                        <a class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                            <i class="auth-form__socials-icon fab fa-facebook"></i>
+                        </a>
+                        <a class="auth-form__socials--instagram btn btn--size-s btn--with-icon">
+                            <i class="auth-form__socials-icon fab fa-instagram"></i>
+                        </a>
+                        <a class="auth-form__socials--linked-in btn btn--size-s btn--with-icon">
+                            <i class="auth-form__socials-icon fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
             </div>
-        </div> -->
+        </div>
 
     </main>
     <script src="./scripts/main.js"></script>

@@ -124,8 +124,8 @@ function animateOnScroll() {
 }
 
 // Gọi hàm animateOnScroll khi cuộn trang hoặc thay đổi kích thước cửa sổ
-window.addEventListener('scroll', animateOnScroll);
-window.addEventListener('resize', animateOnScroll);
+document.addEventListener('scroll', animateOnScroll);
+document.addEventListener('resize', animateOnScroll);
 // // Gọi hàm animateOnScroll khi trang được tải
 // document.addEventListener('DOMContentLoaded', animateOnScroll);
 
@@ -136,3 +136,48 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollTarget.scrollIntoView({ behavior: 'smooth' });
     });
 });
+
+// Lấy modal và nút mở modal
+const modal = document.querySelector('.modal');
+const openModalBtn = document.querySelector('.button-login');
+openModalBtn.addEventListener('click', function() {
+    modal.classList.toggle('show-modal');
+});
+
+// Đóng modal khi người dùng click vào nút đóng
+var closeModalBtns = document.querySelectorAll('.close-modal');
+closeModalBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        // Xóa class 'show' khỏi modal để ẩn nó đi
+        modal.classList.remove('show-modal');
+    });
+});
+
+const loginForm = document.querySelector('.auth-form__login');
+const registerForm = document.querySelector('.auth-form__register');
+
+const switchRegister = document.querySelector('#switch-register');
+const switchLogin = document.querySelector('#switch-login');
+
+// Formlogin (onClick -> Regist)
+switchRegister.addEventListener('click', function (e) {
+    e.stopPropagation();
+    // console.log("test1");
+    registerForm.classList.remove('slide-out--back');
+    loginForm.classList.remove('slide-in--back');
+
+    loginForm.classList.add('slide-in');
+    registerForm.classList.add('slide-out');
+
+});
+
+switchLogin.addEventListener('click', function (e) {
+    e.stopPropagation();
+    // console.log("test2");
+
+    registerForm.classList.add('slide-out--back');
+    loginForm.classList.add('slide-in--back');
+
+});
+
+

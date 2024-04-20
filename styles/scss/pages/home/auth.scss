@@ -5,8 +5,13 @@
     right: 0;
     bottom: 0;
     left: 0;
+    display: none;
+    animation: fadeIn linear 0.1s; 
+    z-index: 2;
+}
+
+.show-modal {
     display: flex;
-    /* animation: fadeIn linear 0.1s; */
 }
 
 .modal__overlay {
@@ -25,18 +30,42 @@
     z-index: 1;
     border-radius: 5px;
     animation: growth linear 0.1s;
+    display: flex;
+    overflow: hidden;
+    width: 500px;
 }
 
 /* Authen modal */
 .auth-form {
-    width: 500px;
     border-color: var(--color-white);
     border-radius: 5px;
-    overflow: hidden;
 }
+
+// FormLogin
+.slide-in {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+.slide-out {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out; 
+}
+
+// Form Regist
+.slide-in--back {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide-out--back {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out; 
+}
+
 
 .auth-form__container {
     padding: 0 32px;
+    width: 500px;
 }
 
 .auth-form__header {
@@ -49,8 +78,8 @@
 
 .auth-form__heading {
     font-size: 2.2rem;
-    font-weight: 400;
-    color: var(--color-text);
+    font-weight: 500;
+    padding: 10px;
 }
 
 .auth-form__switch-btn {
@@ -84,7 +113,7 @@
 }
 
 .auth-form__policy-text {
-    font-style: 1.2rem;
+    font-size: 1.2rem;
     line-height: 1.6rem;
     text-align: center;
     padding: 0 12px;
@@ -108,8 +137,13 @@
 .auth-form__socials {
     background-color: #F5F5F5;
     padding: 14px 36px;
+
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+
     margin-top: 24px;
 }
 
@@ -120,6 +154,10 @@
 .auth-form__socials--facebook {
     color: var(--color-white);
     background-color: #3A5A98;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .auth-form__socials--facebook .auth-form__socials-icon {
@@ -130,10 +168,25 @@
     margin: 0 24px;
 }
 
-.auth-form__socials--google {
-    color: #666;
-    background-color: var(--color-white);
+.auth-form__socials--instagram {
+    color: var(--color-white);
+    background-color: orangered;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
 }
+
+.auth-form__socials--linked-in {
+    color: var(--color-white);
+    background-color: #0077B5;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
 
 .auth-form__help {
     display: flex;
