@@ -153,24 +153,21 @@ closeModalBtns.forEach(function(btn) {
     });
 });
 
+// Slides 
 const loginForm = document.querySelector('.auth-form__login');
 const registerForm = document.querySelector('.auth-form__register');
-
 const switchRegister = document.querySelector('#switch-register');
 const switchLogin = document.querySelector('#switch-login');
-
 // Formlogin (onClick -> Regist)
 switchRegister.addEventListener('click', function (e) {
     e.stopPropagation();
     // console.log("test1");
     registerForm.classList.remove('slide-out--back');
     loginForm.classList.remove('slide-in--back');
-
     loginForm.classList.add('slide-in');
     registerForm.classList.add('slide-out');
 
 });
-
 switchLogin.addEventListener('click', function (e) {
     e.stopPropagation();
     // console.log("test2");

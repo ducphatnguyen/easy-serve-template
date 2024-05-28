@@ -39,6 +39,9 @@
 .auth-form {
     border-color: var(--color-white);
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 // FormLogin
@@ -72,8 +75,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 12px;
-    margin-top: 10px;
+    // padding: 0 12px;
+    margin-top: 20px;
 }
 
 .auth-form__heading {
